@@ -1,0 +1,7 @@
+{
+  "name": "pnsqWeb",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
