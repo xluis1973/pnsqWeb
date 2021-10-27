@@ -37,15 +37,34 @@ public btSelectH:String="outline";
 }
 ngAfterViewInit(): void {
   
-  mapboxgl.accessToken = 'pk.eyJ1IjoibHVpczE5NzMiLCJhIjoiY2tsMWg2OTV6MDMyMjMybXJlcXhyOTY1MyJ9.YN_7kOCUnfTsbUbInFTUgQ';
+  /*mapboxgl.accessToken = 'pk.eyJ1IjoibHVpczE5NzMiLCJhIjoiY2tsMWg2OTV6MDMyMjMybXJlcXhyOTY1MyJ9.YN_7kOCUnfTsbUbInFTUgQ';
   const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11'
  });
+*/
+
+mapboxgl.accessToken = 'pk.eyJ1IjoibHVpczE5NzMiLCJhIjoiY2tsMWg2OTV6MDMyMjMybXJlcXhyOTY1MyJ9.YN_7kOCUnfTsbUbInFTUgQ';
+const map = new mapboxgl.Map({
+container: 'map', // container ID
+style: 'mapbox://styles/mapbox/streets-v11', // style URL
+center: [-74.5, 40], // starting position
+zoom: 9 // starting zoom
+});
+ 
+map.on('load', () => {
+  map.resize();
+  // Insert the layer beneath any symbol layer.
+    const layers = map.getStyle().layers;
+    const labelLayerId = layers.find(
+    (layer) => layer.type === 'symbol' && layer.layout['text-field']
+  ).id;
+// Add zoom and rotation controls to the map.
+map.addControl(new mapboxgl.NavigationControl());
 
  console.log('Cargando');
-
 /*
+
  const map = new mapboxgl.Map({
   style: 'mapbox://styles/mapbox/light-v10',
   center: [-66.31252659628312,-33.18440094418022],
@@ -110,7 +129,9 @@ ngAfterViewInit(): void {
     .setLngLat([-66.3122395, -33.1843936])
     .setPopup(new mapboxgl.Popup().setHTML("<h1>Inmobiliaria La Punta</h1>"))
     .addTo(map);
+
 */
+
 
 }
 
