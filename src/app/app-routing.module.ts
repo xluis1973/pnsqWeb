@@ -16,7 +16,11 @@ const routes: Routes = [
   {
     path: 'monitoreo',
     loadChildren: () => import('./pages/monitoreo/monitoreo.module').then( m => m.MonitoreoPageModule)
+  },  {
+    path: 'admin',
+    loadChildren: () => import('./pages/admin/admin.module').then( m => m.AdminPageModule)
   }
+
 ];
 
 @NgModule({

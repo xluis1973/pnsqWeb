@@ -1,5 +1,43 @@
-
-   
-        <div id='map' ></div>
+<ion-header>
+        <ion-toolbar>
+          <ion-avatar slot="start">
+            <img src="/assets/logo.png" />
+          </ion-avatar>
+          
+          <ion-buttons slot="end">
+            <ion-button (click)="onClickM()" [fill] ="btSelectM" shape="round">
+             Map
+            </ion-button>
+            <ion-button (click)="onClickS()" [fill] ="btSelectS"   shape="round">
+             Sat
+            </ion-button>
+            <ion-button (click)="onClickH()" [fill] ="btSelectH" shape="round">
+              Hib
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      
+      <ion-content class="ion-padding">
+        
+       <ion-grid fixed>
+          <ion-row>
+            <ion-col size="4">
+              <app-lateral></app-lateral>
+            </ion-col>
+            <ion-col size="8">
+              <div id='map' ></div>
+      
+              <h1>123456789012345678901234567890</h1>
+      
+      
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      
+         
        
-
+           
+       
+      </ion-content>
+      <app-footer></app-footer>
