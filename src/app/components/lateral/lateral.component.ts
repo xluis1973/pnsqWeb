@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-lateral',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LateralComponent implements OnInit {
 
-  constructor() { }
+  constructor(private  navCrl:NavController) { }
 
   ngOnInit() {}
 
-  
+  monitoreo(){
+    this.navCrl.navigateRoot('/monitoreo',{animated:true});
+  }
+
+  administracion(){
+    this.navCrl.navigateRoot('/admin',{animated:true});
+  }
 }

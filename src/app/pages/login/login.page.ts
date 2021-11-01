@@ -18,8 +18,8 @@ private res:boolean;
  
 
   loginUser={
-    email:'mercado@mail.com',
-    password:'123'
+    email:'luis@mercado.com',
+    password:'123456'
   };
   constructor(private  navCrl:NavController,private userServ:UsuarioService, private alertasService:AlertasService) { }
 
@@ -35,6 +35,8 @@ private res:boolean;
 
                 this.navCrl.navigateRoot('/monitoreo',{animated:true});
 
+       }else {
+         this.alertasService.presentAlert("Usuario y/contraseña incorrecta");
        }
       
      }

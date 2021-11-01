@@ -19,6 +19,18 @@ const routes: Routes = [
   },  {
     path: 'admin',
     loadChildren: () => import('./pages/admin/admin.module').then( m => m.AdminPageModule)
+  },
+  {
+    path: 'publicar',
+    loadChildren: () => import('./pages/publicar/publicar.module').then( m => m.PublicarPageModule)
+  },
+  {
+    path: 'mensajes',
+    loadChildren: () => import('./pages/mensajes/mensajes.module').then( m => m.MensajesPageModule)
+  },
+  {
+    path: 'reportes',
+    loadChildren: () => import('./pages/reportes/reportes.module').then( m => m.ReportesPageModule)
   }
 
 ];

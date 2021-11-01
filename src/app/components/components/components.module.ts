@@ -6,11 +6,13 @@ import { FooterComponent } from '../footer/footer.component';
 
 
 
+
 @NgModule({
   declarations: [LateralComponent,FooterComponent],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
+    
   ],exports:[LateralComponent,FooterComponent]
 })
 export class ComponentsModule { }

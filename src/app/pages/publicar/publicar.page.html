@@ -1,0 +1,140 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-avatar slot="start">
+      <img src="/assets/logo.png" />
+    </ion-avatar>
+    
+    <ion-buttons slot="end">
+      <ion-button (click)="onClickM()" [fill] ="btSelectM" shape="round">
+       <ion-icon slot="icon-only" name="add" ></ion-icon>
+      </ion-button>
+      <ion-button (click)="onClickS()" [fill] ="btSelectS"   shape="round">
+        <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)="onClickH()" [fill] ="btSelectH" shape="round">
+        <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)="onClickH()" [fill] ="btSelectH" shape="round">
+        <ion-icon slot="icon-only" name="search-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+ <ion-grid fixed>
+    <ion-row>
+      <ion-col size="4">
+        <app-lateral></app-lateral>
+      </ion-col>
+      <ion-col size="8">
+        
+        <form #formulario="ngForm">
+        
+                
+          <ion-row>
+            <ion-col>
+              
+                <ion-list>
+                  
+                  <ion-item>
+                    <ion-label>Título</ion-label>
+                    <ion-input name="titulo"
+                    required
+                    
+                              type="text"
+                               ></ion-input>
+                  </ion-item>
+    
+                  <ion-item>
+                    <ion-label>Fecha de Vencimiento</ion-label>
+                    <ion-input name="venc"
+                               type="text"
+                               ></ion-input>
+                  </ion-item>
+  
+                  <ion-item>
+                      <ion-label>Nombre</ion-label>
+                      <ion-input name="nombre"
+                                 type="text"
+                                 ></ion-input>
+                    </ion-item>
+  
+                    <ion-item>
+                      <ion-label>Dirección</ion-label>
+                      <ion-input name="direccion"
+                                 type="text"
+                                 ></ion-input>
+                    </ion-item>
+  
+                    <ion-item>
+                      <ion-label>Teléfono</ion-label>
+                      <ion-input name="telefono"
+                                 type="text"
+                                 ></ion-input>
+                    </ion-item>
+  
+                    <ion-item>
+                      <ion-label>EMail</ion-label>
+                      <ion-input name="email"
+                                 type="email"
+                                 ></ion-input>
+                    </ion-item>
+  
+                    <ion-item>
+                      <ion-label>Password</ion-label>
+                      <ion-input name="password"
+                                 type="password"
+                                 ></ion-input>
+                    </ion-item>
+    
+                    <ion-item>
+                      <ion-label>Nro. Habilitación</ion-label>
+                      <ion-input name="habilitacion"
+                                 type="number"
+                                 ></ion-input>
+                    </ion-item>
+  
+                    <ion-item>
+                      <ion-label>Alta Habilitación</ion-label>
+                      <ion-input name="altaHabilitacion"
+                                 type="date"
+                                 ></ion-input>
+                    </ion-item>
+  
+                    <ion-item>
+                      <ion-label>Vencimiento Habilitación</ion-label>
+                      <ion-input name="vtoHabilitacion"
+                                 type="date"
+                                 ></ion-input>
+                    </ion-item>
+    
+                </ion-list>
+            </ion-col>
+          </ion-row>
+          
+          <ion-row>
+            <ion-col class="ion-text-center">
+              <ion-button type="submit"
+                          color="tertiary"
+                          shape="round">
+              Registrar
+            </ion-button>
+          </ion-col>
+        </ion-row>
+     
+      </form>
+
+        
+
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+   
+ 
+     
+ 
+</ion-content>
