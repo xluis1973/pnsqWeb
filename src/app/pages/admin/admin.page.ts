@@ -44,4 +44,24 @@ onClickB(){
   this.btSelectD="outline";   
   this.btSelectB="solid";  
 }
+
+crearUsuario(){
+  /*const auth = getAuth();
+     //Para crear un nuevo usuario.
+     createUserWithEmailAndPassword(auth, "javy@mercado.com", "12345678")
+       .then((userCredential) => {
+         // Signed in
+         const user = userCredential.user;
+         console.log('Exitoso ');
+         console.log(user);
+         // ...
+       })
+       .catch((error) => {
+         const errorCode = error.code;
+         const errorMessage = error.message;
+         console.log('Error ');
+         // ..
+       });*/
+}
+
 }
