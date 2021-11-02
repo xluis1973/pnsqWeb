@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Guia, Usuario } from 'src/app/interfaces/interfaces';
+import { AlertasService } from 'src/app/services/alertas.service';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-admin',
@@ -11,8 +15,27 @@ export class AdminPage implements OnInit {
   public btSelectD:String="outline";
   public btSelectB:String="outline";
 
-  constructor() { }
+  constructor(private usuarioService:UsuarioService, private alertasService:AlertasService) { }
 
+  usuario:Usuario={
+    identificador:"",
+    apellido:"",
+    nombre:"",
+    domicilio:"", 
+    ciudad:"",
+    telefono:"",
+    activo:true  };
+
+  guia:Guia={
+    identificador:"",
+    usuario: "",
+    cuil: "",
+    nroHabiliatacion:-1,
+    fHabilitacion: null,
+    vtoHabilitacion:null,
+    email:"",
+    password:""
+  };
   ngOnInit() {
   }
 
@@ -45,23 +68,32 @@ onClickB(){
   this.btSelectB="solid";  
 }
 
-crearUsuario(){
-  /*const auth = getAuth();
-     //Para crear un nuevo usuario.
-     createUserWithEmailAndPassword(auth, "javy@mercado.com", "12345678")
-       .then((userCredential) => {
-         // Signed in
-         const user = userCredential.user;
-         console.log('Exitoso ');
-         console.log(user);
-         // ...
-       })
-       .catch((error) => {
-         const errorCode = error.code;
-         const errorMessage = error.message;
-         console.log('Error ');
-         // ..
-       });*/
+async crearUsuario(formulario:NgForm){
+  const resp:boolean = await this.usuarioService.crearUsuario(this.guia.email,this.guia.password);
+  if(resp){
+
+        await this.alertasService.presentAlert("Usuario Registrado Exitosamente");
+        
+  } else {
+    await this.alertasService.presentAlert("El Usuario ya Existe");
+   
+  }
+  this.limpiarUsuario();
+
+}
+
+limpiarUsuario(){
+  this.usuario.apellido="";
+  this.usuario.nombre="";
+  this.usuario.ciudad="";
+  this.usuario.domicilio="";
+  this.usuario.telefono="";
+  this.guia.cuil="";
+  this.guia.email="";
+  this.guia.nroHabiliatacion=0;
+  this.guia.password="";
+  this.guia.fHabilitacion=null;
+  this.guia.vtoHabilitacion=null;
 }
 
 }

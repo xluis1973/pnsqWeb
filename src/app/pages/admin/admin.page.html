@@ -29,7 +29,7 @@
       </ion-col>
       <ion-col size="8">
 
-        <form #formulario="ngForm">
+        <form (ngSubmit)="crearUsuario(formulario)" #formulario="ngForm" >
         
                 
         <ion-row>
@@ -40,9 +40,9 @@
                 <ion-item>
                   <ion-label>Cuil</ion-label>
                   <ion-input name="cuil"
-                  required
-                  placeholder='cccc'
+                            required
                             type="text"
+                            [(ngModel)]="guia.cuil"
                              ></ion-input>
                 </ion-item>
   
@@ -50,6 +50,7 @@
                   <ion-label>Apellido</ion-label>
                   <ion-input name="apellido"
                              type="text"
+                             [(ngModel)]="usuario.apellido"
                              ></ion-input>
                 </ion-item>
 
@@ -57,6 +58,7 @@
                     <ion-label>Nombre</ion-label>
                     <ion-input name="nombre"
                                type="text"
+                               [(ngModel)]="usuario.nombre"
                                ></ion-input>
                   </ion-item>
 
@@ -64,6 +66,14 @@
                     <ion-label>Dirección</ion-label>
                     <ion-input name="direccion"
                                type="text"
+                               [(ngModel)]="usuario.domicilio"
+                               ></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Ciudad</ion-label>
+                    <ion-input name="ciudad"
+                               type="text"
+                               [(ngModel)]="usuario.ciudad"
                                ></ion-input>
                   </ion-item>
 
@@ -71,6 +81,7 @@
                     <ion-label>Teléfono</ion-label>
                     <ion-input name="telefono"
                                type="text"
+                               [(ngModel)]="usuario.telefono"
                                ></ion-input>
                   </ion-item>
 
@@ -78,6 +89,7 @@
                     <ion-label>EMail</ion-label>
                     <ion-input name="email"
                                type="email"
+                               [(ngModel)]="guia.email"
                                ></ion-input>
                   </ion-item>
 
@@ -85,6 +97,7 @@
                     <ion-label>Password</ion-label>
                     <ion-input name="password"
                                type="password"
+                               [(ngModel)]="guia.password"
                                ></ion-input>
                   </ion-item>
   
@@ -92,6 +105,7 @@
                     <ion-label>Nro. Habilitación</ion-label>
                     <ion-input name="habilitacion"
                                type="number"
+                               [(ngModel)]="guia.nroHabilitacion"
                                ></ion-input>
                   </ion-item>
 
@@ -99,6 +113,7 @@
                     <ion-label>Alta Habilitación</ion-label>
                     <ion-input name="altaHabilitacion"
                                type="date"
+                               [(ngModel)]="guia.fHabilitacion"
                                ></ion-input>
                   </ion-item>
 
@@ -106,6 +121,7 @@
                     <ion-label>Vencimiento Habilitación</ion-label>
                     <ion-input name="vtoHabilitacion"
                                type="date"
+                               [(ngModel)]="guia.vtoHabilitacion"
                                ></ion-input>
                   </ion-item>
   
