@@ -69,10 +69,11 @@ onClickB(){
 }
 
 async crearUsuario(formulario:NgForm){
-  const resp:boolean = await this.usuarioService.crearUsuario(this.guia.email,this.guia.password);
+  const resp:boolean = await this.usuarioService.crearUsuario(this.usuario,this.guia);
   if(resp){
 
         await this.alertasService.presentAlert("Usuario Registrado Exitosamente");
+        await this.usuarioService.guardarDatos();
         
   } else {
     await this.alertasService.presentAlert("El Usuario ya Existe");
