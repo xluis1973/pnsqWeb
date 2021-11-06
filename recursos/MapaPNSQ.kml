@@ -1,0 +1,2078 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Parque Nacional Sierra de las Quijadas</name>
+    <description>Mapa Google del área protegida</description>
+    <Style id="icon-1899-000000-normal">
+      <IconStyle>
+        <color>ff000000</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-000000-highlight">
+      <IconStyle>
+        <color>ff000000</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-000000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-000000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-000000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-01579B-normal">
+      <IconStyle>
+        <color>ff9b5701</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-01579B-highlight">
+      <IconStyle>
+        <color>ff9b5701</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-01579B">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-01579B-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-01579B-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-1A237E-normal">
+      <IconStyle>
+        <color>ff7e231a</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-1A237E-highlight">
+      <IconStyle>
+        <color>ff7e231a</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-1A237E">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-1A237E-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-1A237E-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-880E4F-normal">
+      <IconStyle>
+        <color>ff4f0e88</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-880E4F-highlight">
+      <IconStyle>
+        <color>ff4f0e88</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-880E4F">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-880E4F-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-880E4F-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-E65100-normal">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-E65100-highlight">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-E65100">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-E65100-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-E65100-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-F57C00-normal">
+      <IconStyle>
+        <color>ff007cf5</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-F57C00-highlight">
+      <IconStyle>
+        <color>ff007cf5</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-F57C00">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-F57C00-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-F57C00-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-FF5252-normal">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-FF5252-highlight">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-FF5252">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-FF5252-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-FF5252-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-FFEA00-normal">
+      <IconStyle>
+        <color>ff00eaff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-FFEA00-highlight">
+      <IconStyle>
+        <color>ff00eaff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-FFEA00">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-FFEA00-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-FFEA00-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-000000-2000-normal">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>2</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-000000-2000-highlight">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>3</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-000000-2000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-000000-2000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-000000-2000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-1000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>1</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-1000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>1.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-1000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-1000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-1000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-0000FF-2000-normal">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>2</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-0000FF-2000-highlight">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>3</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-0000FF-2000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-0000FF-2000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-0000FF-2000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-00AA00-1000-normal">
+      <LineStyle>
+        <color>ff00aa00</color>
+        <width>1</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-00AA00-1000-highlight">
+      <LineStyle>
+        <color>ff00aa00</color>
+        <width>1.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-00AA00-1000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-00AA00-1000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-00AA00-1000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-00AA00-2000-normal">
+      <LineStyle>
+        <color>ff00aa00</color>
+        <width>2</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-00AA00-2000-highlight">
+      <LineStyle>
+        <color>ff00aa00</color>
+        <width>3</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-00AA00-2000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-00AA00-2000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-00AA00-2000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-097138-3713-normal">
+      <LineStyle>
+        <color>ff387109</color>
+        <width>3.713</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-097138-3713-highlight">
+      <LineStyle>
+        <color>ff387109</color>
+        <width>5.5695</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-097138-3713">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-097138-3713-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-097138-3713-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-FF0000-1000-normal">
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>1</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-FF0000-1000-highlight">
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>1.5</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-FF0000-1000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-FF0000-1000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-FF0000-1000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-FFAA00-2000-normal">
+      <LineStyle>
+        <color>ff00aaff</color>
+        <width>2</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-FFAA00-2000-highlight">
+      <LineStyle>
+        <color>ff00aaff</color>
+        <width>3</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-FFAA00-2000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-FFAA00-2000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-FFAA00-2000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="line-FFFF00-2000-normal">
+      <LineStyle>
+        <color>ff00ffff</color>
+        <width>2</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-FFFF00-2000-highlight">
+      <LineStyle>
+        <color>ff00ffff</color>
+        <width>3</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-FFFF00-2000">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-FFFF00-2000-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-FFFF00-2000-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>PN Sierra de las Quijadas</name>
+      <Placemark>
+        <name>PN Sierra de/Las Quijadas</name>
+        <description><![CDATA[descripción: <br>ROTULO: PN Sierra de/Las Quijadas]]></description>
+        <styleUrl>#line-097138-3713</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="ROTULO">
+            <value>PN Sierra de/Las Quijadas</value>
+          </Data>
+        </ExtendedData>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -67.165783,-32.411862,0
+            -67.162174,-32.452782,0
+            -67.08253,-32.452775,0
+            -67.082946,-32.414571,0
+            -67.034428,-32.413673,0
+            -67.033944,-32.45473,0
+            -66.978699,-32.453775,0
+            -66.97828,-32.478951,0
+            -66.971124,-32.470713,0
+            -66.9694,-32.460411,0
+            -66.962949,-32.467166,0
+            -66.960073,-32.467456,0
+            -66.957585,-32.467804,0
+            -66.956699,-32.468489,0
+            -66.956392,-32.468807,0
+            -66.963262,-32.501053,0
+            -66.968322,-32.500303,0
+            -66.977178,-32.54435,0
+            -66.97768,-32.51457,0
+            -66.995403,-32.514444,0
+            -67.018019,-32.532157,0
+            -67.019068,-32.560191,0
+            -67.020156,-32.595017,0
+            -67.013465,-32.600483,0
+            -67.023343,-32.614474,0
+            -67.027305,-32.671242,0
+            -67.031371,-32.721131,0
+            -67.1799,-32.720231,0
+            -67.189702,-32.693978,0
+            -67.215737,-32.676866,0
+            -67.236715,-32.633806,0
+            -67.250363,-32.621982,0
+            -67.242087,-32.60902,0
+            -67.248098,-32.586765,0
+            -67.260952,-32.555938,0
+            -67.272493,-32.537635,0
+            -67.280846,-32.505985,0
+            -67.295682,-32.475121,0
+            -67.286843,-32.439941,0
+            -67.294069,-32.416824,0
+            -67.165783,-32.411862,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Puntos</name>
+      <Placemark>
+        <name>Intendencia PN SQJ</name>
+        <description><![CDATA[descripción: <br>TIPO: INTENDENCIA<br>NOMBRE: SIERRA DE LAS QUIJADAS<br>ROTULO: Intendencia PN SQJ<br>LATITUD: 33° 18' 24.46" S<br>LONGITUD: 66° 21' 20.73" W<br>ALTITUD: 704<br>AREA_PROTE: Parque Nacional Sierra de las Quijadas<br>name: Intendencia PN SQJ]]></description>
+        <styleUrl>#icon-1899-880E4F</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="TIPO">
+            <value>INTENDENCIA</value>
+          </Data>
+          <Data name="NOMBRE">
+            <value>SIERRA DE LAS QUIJADAS</value>
+          </Data>
+          <Data name="ROTULO">
+            <value>Intendencia PN SQJ</value>
+          </Data>
+          <Data name="LATITUD">
+            <value><![CDATA[33° 18' 24.46" S]]></value>
+          </Data>
+          <Data name="LONGITUD">
+            <value><![CDATA[66° 21' 20.73" W]]></value>
+          </Data>
+          <Data name="ALTITUD">
+            <value>704</value>
+          </Data>
+          <Data name="AREA_PROTE">
+            <value>Parque Nacional Sierra de las Quijadas</value>
+          </Data>
+          <Data name="name">
+            <value>Intendencia PN SQJ</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -66.355761,-33.306797,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Centro Operativo</name>
+        <description><![CDATA[descripción: <br>TIPO: AREA / CENTRO OPERATIVO<br>NOMBRE: HUALTARAN<br>ROTULO: Centro Operativo<br>LATITUD: 32° 28' 3.448" S<br>LONGITUD: 66° 57' 38.41" W<br>ALTITUD: 708<br>AREA_PROTE: Parque Nacional Sierra de las Quijadas<br>name: Centro Operativo]]></description>
+        <styleUrl>#icon-1899-1A237E</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="TIPO">
+            <value>AREA / CENTRO OPERATIVO</value>
+          </Data>
+          <Data name="NOMBRE">
+            <value>HUALTARAN</value>
+          </Data>
+          <Data name="ROTULO">
+            <value>Centro Operativo</value>
+          </Data>
+          <Data name="LATITUD">
+            <value><![CDATA[32° 28' 3.448" S]]></value>
+          </Data>
+          <Data name="LONGITUD">
+            <value><![CDATA[66° 57' 38.41" W]]></value>
+          </Data>
+          <Data name="ALTITUD">
+            <value>708</value>
+          </Data>
+          <Data name="AREA_PROTE">
+            <value>Parque Nacional Sierra de las Quijadas</value>
+          </Data>
+          <Data name="name">
+            <value>Centro Operativo</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -66.96067,-32.467625,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Centro de Informes</name>
+        <description><![CDATA[descripción: <br>TIPO: CENTRO DE INFORMES<br>NOMBRE: CENTRO DE INFORMES<br>ROTULO: Centro de Informes<br>LATITUD: 32° 28' 4.706" S<br>LONGITUD: 66° 57' 43.51" W<br>ALTITUD: 706<br>AREA_PROTE: Parque Nacional Sierra de las Quijadas<br>name: Centro de Informes]]></description>
+        <styleUrl>#icon-1899-000000</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="TIPO">
+            <value>CENTRO DE INFORMES</value>
+          </Data>
+          <Data name="NOMBRE">
+            <value>CENTRO DE INFORMES</value>
+          </Data>
+          <Data name="ROTULO">
+            <value>Centro de Informes</value>
+          </Data>
+          <Data name="LATITUD">
+            <value><![CDATA[32° 28' 4.706" S]]></value>
+          </Data>
+          <Data name="LONGITUD">
+            <value><![CDATA[66° 57' 43.51" W]]></value>
+          </Data>
+          <Data name="ALTITUD">
+            <value>706</value>
+          </Data>
+          <Data name="AREA_PROTE">
+            <value>Parque Nacional Sierra de las Quijadas</value>
+          </Data>
+          <Data name="name">
+            <value>Centro de Informes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -66.962088,-32.467974,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Estacionamiento</name>
+        <description><![CDATA[descripción: <br>TIPO: ESTACIONAMIENTO<br>NOMBRE: ESTACIONAMIENTO<br>ROTULO: Estacionamiento<br>LATITUD: 32° 28' 3.745" S<br>LONGITUD: 66° 57' 44.03" W<br>ALTITUD: 714<br>AREA_PROTE: Parque Nacional Sierra de las Quijadas<br>name: Estacionamiento]]></description>
+        <styleUrl>#icon-1899-FF5252</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="TIPO">
+            <value>ESTACIONAMIENTO</value>
+          </Data>
+          <Data name="NOMBRE">
+            <value>ESTACIONAMIENTO</value>
+          </Data>
+          <Data name="ROTULO">
+            <value>Estacionamiento</value>
+          </Data>
+          <Data name="LATITUD">
+            <value><![CDATA[32° 28' 3.745" S]]></value>
+          </Data>
+          <Data name="LONGITUD">
+            <value><![CDATA[66° 57' 44.03" W]]></value>
+          </Data>
+          <Data name="ALTITUD">
+            <value>714</value>
+          </Data>
+          <Data name="AREA_PROTE">
+            <value>Parque Nacional Sierra de las Quijadas</value>
+          </Data>
+          <Data name="name">
+            <value>Estacionamiento</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -66.962232,-32.467707,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Camping</name>
+        <description><![CDATA[descripción: <br>TIPO: AREA DE ACAMPE <br>NOMBRE: CAMPING AGRESTE<br>ROTULO: Camping<br>LATITUD: 32° 28' 23.34" S<br>LONGITUD: 66° 57' 43.07" W<br>ALTITUD: 714<br>AREA_PROTE: Parque Nacional Sierra de las Quijadas<br>name: Camping]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="TIPO">
+            <value>AREA DE ACAMPE </value>
+          </Data>
+          <Data name="NOMBRE">
+            <value>CAMPING AGRESTE</value>
+          </Data>
+          <Data name="ROTULO">
+            <value>Camping</value>
+          </Data>
+          <Data name="LATITUD">
+            <value><![CDATA[32° 28' 23.34" S]]></value>
+          </Data>
+          <Data name="LONGITUD">
+            <value><![CDATA[66° 57' 43.07" W]]></value>
+          </Data>
+          <Data name="ALTITUD">
+            <value>714</value>
+          </Data>
+          <Data name="AREA_PROTE">
+            <value>Parque Nacional Sierra de las Quijadas</value>
+          </Data>
+          <Data name="name">
+            <value>Camping</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -66.961966,-32.473152,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Baños</name>
+        <description><![CDATA[descripción: <br>TIPO: SANITARIOS<br>NOMBRE: BAÑOS<br>ROTULO: Baños<br>LATITUD: 32° 28' 24.86" S<br>LONGITUD: 66° 57' 42.93" W<br>ALTITUD: 715<br>AREA_PROTE: Parque Nacional Sierra de las Quijadas<br>name: Baños]]></description>
+        <styleUrl>#icon-1899-01579B</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="TIPO">
+            <value>SANITARIOS</value>
+          </Data>
+          <Data name="NOMBRE">
+            <value>BAÑOS</value>
+          </Data>
+          <Data name="ROTULO">
+            <value>Baños</value>
+          </Data>
+          <Data name="LATITUD">
+            <value><![CDATA[32° 28' 24.86" S]]></value>
+          </Data>
+          <Data name="LONGITUD">
+            <value><![CDATA[66° 57' 42.93" W]]></value>
+          </Data>
+          <Data name="ALTITUD">
+            <value>715</value>
+          </Data>
+          <Data name="AREA_PROTE">
+            <value>Parque Nacional Sierra de las Quijadas</value>
+          </Data>
+          <Data name="name">
+            <value>Baños</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -66.961926,-32.473573,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Estacionamiento</name>
+        <description><![CDATA[descripción: <br>TIPO: ESTACIONAMIENTO<br>NOMBRE: ESTACIONAMIENTO<br>ROTULO: Estacionamiento<br>LATITUD: 32° 28' 26.07" S<br>LONGITUD: 66° 57' 44.28" W<br>ALTITUD: 714<br>AREA_PROTE: Parque Nacional Sierra de las Quijadas<br>name: Estacionamiento]]></description>
+        <styleUrl>#icon-1899-FF5252</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="TIPO">
+            <value>ESTACIONAMIENTO</value>
+          </Data>
+          <Data name="NOMBRE">
+            <value>ESTACIONAMIENTO</value>
+          </Data>
+          <Data name="ROTULO">
+            <value>Estacionamiento</value>
+          </Data>
+          <Data name="LATITUD">
+            <value><![CDATA[32° 28' 26.07" S]]></value>
+          </Data>
+          <Data name="LONGITUD">
+            <value><![CDATA[66° 57' 44.28" W]]></value>
+          </Data>
+          <Data name="ALTITUD">
+            <value>714</value>
+          </Data>
+          <Data name="AREA_PROTE">
+            <value>Parque Nacional Sierra de las Quijadas</value>
+          </Data>
+          <Data name="name">
+            <value>Estacionamiento</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -66.962301,-32.47391,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Estacionamiento</name>
+        <description><![CDATA[descripción: <br>TIPO: ESTACIONAMIENTO<br>NOMBRE: ESTACIONAMIENTO<br>ROTULO: Estacionamiento<br>LATITUD: 32° 28' 21.81" S<br>LONGITUD: 66° 57' 43.28" W<br>ALTITUD: 714<br>AREA_PROTE: Parque Nacional Sierra de las Quijadas<br>name: Estacionamiento]]></description>
+        <styleUrl>#icon-1899-FF5252</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="TIPO">
+            <value>ESTACIONAMIENTO</value>
+          </Data>
+          <Data name="NOMBRE">
+            <value>ESTACIONAMIENTO</value>
+          </Data>
+          <Data name="ROTULO">
+            <value>Estacionamiento</value>
+          </Data>
+          <Data name="LATITUD">
+            <value><![CDATA[32° 28' 21.81" S]]></value>
+          </Data>
+          <Data name="LONGITUD">
+            <value><![CDATA[66° 57' 43.28" W]]></value>
+          </Data>
+          <Data name="ALTITUD">
+            <value>714</value>
+          </Data>
+          <Data name="AREA_PROTE">
+            <value>Parque Nacional Sierra de las Quijadas</value>
+          </Data>
+          <Data name="name">
+            <value>Estacionamiento</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -66.962023,-32.472726,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hornillos</name>
+        <description><![CDATA[descripción: <br>TIPO: ATRACTIVO TURISTICO<br>NOMBRE: HORNILLOS<br>ROTULO: Hornillos<br>LATITUD: 32° 29' 10.45" S<br>LONGITUD: 66° 59' 2.036" W<br>ALTITUD: 751<br>AREA_PROTE: Parque Nacional Sierra de las Quijadas<br>name: Hornillos]]></description>
+        <styleUrl>#icon-1899-F57C00</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="TIPO">
+            <value>ATRACTIVO TURISTICO</value>
+          </Data>
+          <Data name="NOMBRE">
+            <value>HORNILLOS</value>
+          </Data>
+          <Data name="ROTULO">
+            <value>Hornillos</value>
+          </Data>
+          <Data name="LATITUD">
+            <value><![CDATA[32° 29' 10.45" S]]></value>
+          </Data>
+          <Data name="LONGITUD">
+            <value><![CDATA[66° 59' 2.036" W]]></value>
+          </Data>
+          <Data name="ALTITUD">
+            <value>751</value>
+          </Data>
+          <Data name="AREA_PROTE">
+            <value>Parque Nacional Sierra de las Quijadas</value>
+          </Data>
+          <Data name="name">
+            <value>Hornillos</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -66.983899,-32.486237,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Picnic</name>
+        <description><![CDATA[descripción: <br>TIPO: AREA RECREATIVA<br>NOMBRE: PICNIC<br>ROTULO: Picnic<br>LATITUD: 32° 29' 44.81" S<br>LONGITUD: 67° 0' 11.08" W<br>ALTITUD: 812<br>AREA_PROTE: Parque Nacional Sierra de las Quijadas<br>name: Picnic]]></description>
+        <styleUrl>#icon-1899-FFEA00</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="TIPO">
+            <value>AREA RECREATIVA</value>
+          </Data>
+          <Data name="NOMBRE">
+            <value>PICNIC</value>
+          </Data>
+          <Data name="ROTULO">
+            <value>Picnic</value>
+          </Data>
+          <Data name="LATITUD">
+            <value><![CDATA[32° 29' 44.81" S]]></value>
+          </Data>
+          <Data name="LONGITUD">
+            <value><![CDATA[67° 0' 11.08" W]]></value>
+          </Data>
+          <Data name="ALTITUD">
+            <value>812</value>
+          </Data>
+          <Data name="AREA_PROTE">
+            <value>Parque Nacional Sierra de las Quijadas</value>
+          </Data>
+          <Data name="name">
+            <value>Picnic</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -67.003079,-32.495782,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mirador</name>
+        <description><![CDATA[descripción: <br>TIPO: MIRADOR<br>NOMBRE: MIRADOR<br>ROTULO: Mirador<br>LATITUD: 32° 29' 42.27" S<br>LONGITUD: 67° 0' 36.23" W<br>ALTITUD: 803<br>AREA_PROTE: Parque Nacional Sierra de las Quijadas<br>name: Mirador]]></description>
+        <styleUrl>#icon-1899-F57C00</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="TIPO">
+            <value>MIRADOR</value>
+          </Data>
+          <Data name="NOMBRE">
+            <value>MIRADOR</value>
+          </Data>
+          <Data name="ROTULO">
+            <value>Mirador</value>
+          </Data>
+          <Data name="LATITUD">
+            <value><![CDATA[32° 29' 42.27" S]]></value>
+          </Data>
+          <Data name="LONGITUD">
+            <value><![CDATA[67° 0' 36.23" W]]></value>
+          </Data>
+          <Data name="ALTITUD">
+            <value>803</value>
+          </Data>
+          <Data name="AREA_PROTE">
+            <value>Parque Nacional Sierra de las Quijadas</value>
+          </Data>
+          <Data name="name">
+            <value>Mirador</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -67.010066,-32.495077,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mirador</name>
+        <description><![CDATA[descripción: <br>TIPO: MIRADOR<br>NOMBRE: MIRADOR<br>ROTULO: Mirador<br>LATITUD: 32° 29' 46.50" S<br>LONGITUD: 67° 0' 35.51" W<br>ALTITUD: 800<br>AREA_PROTE: Parque Nacional Sierra de las Quijadas<br>name: Mirador]]></description>
+        <styleUrl>#icon-1899-F57C00</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="TIPO">
+            <value>MIRADOR</value>
+          </Data>
+          <Data name="NOMBRE">
+            <value>MIRADOR</value>
+          </Data>
+          <Data name="ROTULO">
+            <value>Mirador</value>
+          </Data>
+          <Data name="LATITUD">
+            <value><![CDATA[32° 29' 46.50" S]]></value>
+          </Data>
+          <Data name="LONGITUD">
+            <value><![CDATA[67° 0' 35.51" W]]></value>
+          </Data>
+          <Data name="ALTITUD">
+            <value>800</value>
+          </Data>
+          <Data name="AREA_PROTE">
+            <value>Parque Nacional Sierra de las Quijadas</value>
+          </Data>
+          <Data name="name">
+            <value>Mirador</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -67.009866,-32.496251,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Estacionamiento</name>
+        <description><![CDATA[descripción: <br>TIPO: ESTACIONAMIENTO<br>NOMBRE: ESTACIONAMIENTO<br>ROTULO: Est. A. Recreativa<br>LATITUD: 32° 29' 43.93" S<br>LONGITUD: 67° 0' 11.48" W<br>ALTITUD: 714<br>AREA_PROTE: Parque Nacional Sierra de las Quijadas<br>name: Estacionamiento]]></description>
+        <styleUrl>#icon-1899-FF5252</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="TIPO">
+            <value>ESTACIONAMIENTO</value>
+          </Data>
+          <Data name="NOMBRE">
+            <value>ESTACIONAMIENTO</value>
+          </Data>
+          <Data name="ROTULO">
+            <value>Est. A. Recreativa</value>
+          </Data>
+          <Data name="LATITUD">
+            <value><![CDATA[32° 29' 43.93" S]]></value>
+          </Data>
+          <Data name="LONGITUD">
+            <value><![CDATA[67° 0' 11.48" W]]></value>
+          </Data>
+          <Data name="ALTITUD">
+            <value>714</value>
+          </Data>
+          <Data name="AREA_PROTE">
+            <value>Parque Nacional Sierra de las Quijadas</value>
+          </Data>
+          <Data name="name">
+            <value>Estacionamiento</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -67.003189,-32.495539,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Confiteria</name>
+        <description><![CDATA[descripción: <br>TIPO: CONFITERIA<br>NOMBRE: CONFITERIA<br>ROTULO: Confiteria<br>LATITUD: 32° 29' 54.20" S<br>LONGITUD: 67° 0' 31.33" W<br>ALTITUD: 812<br>AREA_PROTE: Parque Nacional Sierra de las Quijadas<br>name: Confiteria]]></description>
+        <styleUrl>#icon-1899-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="TIPO">
+            <value>CONFITERIA</value>
+          </Data>
+          <Data name="NOMBRE">
+            <value>CONFITERIA</value>
+          </Data>
+          <Data name="ROTULO">
+            <value>Confiteria</value>
+          </Data>
+          <Data name="LATITUD">
+            <value><![CDATA[32° 29' 54.20" S]]></value>
+          </Data>
+          <Data name="LONGITUD">
+            <value><![CDATA[67° 0' 31.33" W]]></value>
+          </Data>
+          <Data name="ALTITUD">
+            <value>812</value>
+          </Data>
+          <Data name="AREA_PROTE">
+            <value>Parque Nacional Sierra de las Quijadas</value>
+          </Data>
+          <Data name="name">
+            <value>Confiteria</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -67.008703,-32.498391,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sanitarios</name>
+        <description><![CDATA[descripción: <br>TIPO: SANITARIOS<br>NOMBRE: SANITARIOS<br>ROTULO: Sanitarios<br>LATITUD: 32° 29' 54.86" S<br>LONGITUD: 67° 0' 31.89" W<br>ALTITUD: 813<br>AREA_PROTE: Parque Nacional Sierra de las Quijadas<br>name: Sanitarios]]></description>
+        <styleUrl>#icon-1899-01579B</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="TIPO">
+            <value>SANITARIOS</value>
+          </Data>
+          <Data name="NOMBRE">
+            <value>SANITARIOS</value>
+          </Data>
+          <Data name="ROTULO">
+            <value>Sanitarios</value>
+          </Data>
+          <Data name="LATITUD">
+            <value><![CDATA[32° 29' 54.86" S]]></value>
+          </Data>
+          <Data name="LONGITUD">
+            <value><![CDATA[67° 0' 31.89" W]]></value>
+          </Data>
+          <Data name="ALTITUD">
+            <value>813</value>
+          </Data>
+          <Data name="AREA_PROTE">
+            <value>Parque Nacional Sierra de las Quijadas</value>
+          </Data>
+          <Data name="name">
+            <value>Sanitarios</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -67.00886,-32.498574,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Estacionamiento</name>
+        <description><![CDATA[descripción: <br>TIPO: ESTACIONAMIENTO<br>NOMBRE: ESTACIONAMIENTO<br>ROTULO: Est. Miradores<br>LATITUD: 32° 29' 53.72" S<br>LONGITUD: 67° 0' 32.89" W<br>ALTITUD: 714<br>AREA_PROTE: Parque Nacional Sierra de las Quijadas<br>name: Estacionamiento]]></description>
+        <styleUrl>#icon-1899-FF5252</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="TIPO">
+            <value>ESTACIONAMIENTO</value>
+          </Data>
+          <Data name="NOMBRE">
+            <value>ESTACIONAMIENTO</value>
+          </Data>
+          <Data name="ROTULO">
+            <value>Est. Miradores</value>
+          </Data>
+          <Data name="LATITUD">
+            <value><![CDATA[32° 29' 53.72" S]]></value>
+          </Data>
+          <Data name="LONGITUD">
+            <value><![CDATA[67° 0' 32.89" W]]></value>
+          </Data>
+          <Data name="ALTITUD">
+            <value>714</value>
+          </Data>
+          <Data name="AREA_PROTE">
+            <value>Parque Nacional Sierra de las Quijadas</value>
+          </Data>
+          <Data name="name">
+            <value>Estacionamiento</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -67.009137,-32.498257,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Balcón Norte</name>
+        <description><![CDATA[descripción: <br>TIPO: MIRADOR<br>NOMBRE: BALCON NORTE<br>ROTULO: Balcón Norte<br>LATITUD: 32° 29' 56.45" S<br>LONGITUD: 67° 0' 43.94" W<br>ALTITUD: 814<br>AREA_PROTE: Parque Nacional Sierra de las Quijadas<br>name: Balcón Norte]]></description>
+        <styleUrl>#icon-1899-F57C00</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="TIPO">
+            <value>MIRADOR</value>
+          </Data>
+          <Data name="NOMBRE">
+            <value>BALCON NORTE</value>
+          </Data>
+          <Data name="ROTULO">
+            <value>Balcón Norte</value>
+          </Data>
+          <Data name="LATITUD">
+            <value><![CDATA[32° 29' 56.45" S]]></value>
+          </Data>
+          <Data name="LONGITUD">
+            <value><![CDATA[67° 0' 43.94" W]]></value>
+          </Data>
+          <Data name="ALTITUD">
+            <value>814</value>
+          </Data>
+          <Data name="AREA_PROTE">
+            <value>Parque Nacional Sierra de las Quijadas</value>
+          </Data>
+          <Data name="name">
+            <value>Balcón Norte</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -67.012208,-32.499014,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Balcón Sur</name>
+        <description><![CDATA[descripción: <br>TIPO: MIRADOR<br>NOMBRE: BALCON SUR<br>ROTULO: Balcón Sur<br>LATITUD: 32° 30' 9.508" S<br>LONGITUD: 67° 0' 52.24" W<br>ALTITUD: 818<br>AREA_PROTE: Parque Nacional Sierra de las Quijadas<br>name: Balcón Sur]]></description>
+        <styleUrl>#icon-1899-F57C00</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="TIPO">
+            <value>MIRADOR</value>
+          </Data>
+          <Data name="NOMBRE">
+            <value>BALCON SUR</value>
+          </Data>
+          <Data name="ROTULO">
+            <value>Balcón Sur</value>
+          </Data>
+          <Data name="LATITUD">
+            <value><![CDATA[32° 30' 9.508" S]]></value>
+          </Data>
+          <Data name="LONGITUD">
+            <value><![CDATA[67° 0' 52.24" W]]></value>
+          </Data>
+          <Data name="ALTITUD">
+            <value>818</value>
+          </Data>
+          <Data name="AREA_PROTE">
+            <value>Parque Nacional Sierra de las Quijadas</value>
+          </Data>
+          <Data name="name">
+            <value>Balcón Sur</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -67.014513,-32.502641,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Caminos y senderos</name>
+      <Placemark>
+        <name>Camino vehicular</name>
+        <description><![CDATA[descripción: <br>Name: Camino vehicular]]></description>
+        <styleUrl>#line-00AA00-2000</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="Name">
+            <value>Camino vehicular</value>
+          </Data>
+        </ExtendedData>
+        <MultiGeometry>
+          <LineString>
+            <tessellate>1</tessellate>
+            <coordinates>
+              -67.002932,-32.495385,0
+              -67.003079,-32.495783,0
+            </coordinates>
+          </LineString>
+          <LineString>
+            <tessellate>1</tessellate>
+            <coordinates>
+              -66.962559,-32.467781,0
+              -66.962618,-32.46798,0
+              -66.962628,-32.468154,0
+              -66.962666,-32.468534,0
+            </coordinates>
+          </LineString>
+          <LineString>
+            <tessellate>1</tessellate>
+            <coordinates>
+              -66.962128,-32.467719,0
+              -66.962278,-32.467621,0
+              -66.962415,-32.467565,0
+              -66.962514,-32.467585,0
+              -66.962556,-32.467653,0
+              -66.962559,-32.467781,0
+            </coordinates>
+          </LineString>
+          <LineString>
+            <tessellate>1</tessellate>
+            <coordinates>
+              -66.961621,-32.467932,0
+              -66.961791,-32.467876,0
+              -66.961948,-32.46781,0
+              -66.962128,-32.467719,0
+              -66.962559,-32.467781,0
+            </coordinates>
+          </LineString>
+          <LineString>
+            <tessellate>1</tessellate>
+            <coordinates>
+              -66.960434,-32.467311,0
+              -66.960836,-32.467572,0
+              -66.96105,-32.46767,0
+              -66.961621,-32.467932,0
+              -66.962223,-32.468241,0
+              -66.962666,-32.468534,0
+              -66.962995,-32.468763,0
+              -66.963864,-32.469326,0
+              -66.964242,-32.469601,0
+              -66.964643,-32.469902,0
+              -66.964787,-32.470011,0
+              -66.964992,-32.470165,0
+              -66.965583,-32.470656,0
+              -66.966508,-32.471402,0
+              -66.967318,-32.472083,0
+              -66.968212,-32.472857,0
+              -66.969092,-32.47363,0
+              -66.969951,-32.474371,0
+              -66.971631,-32.475804,0
+              -66.975416,-32.479049,0
+              -66.97592,-32.479471,0
+              -66.976691,-32.480133,0
+              -66.978421,-32.481595,0
+              -66.979231,-32.482317,0
+              -66.981287,-32.484097,0
+              -66.982452,-32.485153,0
+              -66.983194,-32.485835,0
+              -66.984063,-32.486625,0
+              -66.984958,-32.487245,0
+              -66.986151,-32.488094,0
+              -66.986593,-32.488572,0
+              -66.987809,-32.490153,0
+              -66.988851,-32.491735,0
+              -66.990124,-32.493704,0
+              -66.990319,-32.493926,0
+              -66.990644,-32.494068,0
+              -66.991011,-32.494181,0
+              -66.991415,-32.494244,0
+              -66.991695,-32.494228,0
+              -66.991958,-32.494143,0
+              -66.992208,-32.494032,0
+              -66.992515,-32.493782,0
+              -66.992933,-32.493734,0
+              -66.993293,-32.49382,0
+              -66.994182,-32.494081,0
+              -66.994441,-32.494267,0
+              -66.994643,-32.494646,0
+              -66.994768,-32.495084,0
+              -66.994874,-32.495603,0
+              -66.994987,-32.496091,0
+              -66.995214,-32.49652,0
+              -66.99548,-32.496854,0
+              -66.995597,-32.49698,0
+              -66.995742,-32.497066,0
+              -66.995955,-32.497149,0
+              -66.996124,-32.497087,0
+              -66.996427,-32.496945,0
+              -66.996782,-32.496952,0
+              -66.997047,-32.497049,0
+              -66.997223,-32.497175,0
+              -66.997303,-32.497301,0
+              -66.997252,-32.497452,0
+              -66.997054,-32.497841,0
+              -66.997089,-32.498002,0
+              -66.997245,-32.498043,0
+              -66.99753,-32.498055,0
+              -66.997735,-32.498122,0
+              -66.997911,-32.498085,0
+              -66.998201,-32.497221,0
+              -66.998363,-32.49686,0
+              -66.998679,-32.496472,0
+              -66.998902,-32.496312,0
+              -66.999312,-32.496196,0
+              -66.999622,-32.496151,0
+              -66.999923,-32.496162,0
+              -67.00008,-32.496154,0
+              -67.000191,-32.496095,0
+              -67.000246,-32.49596,0
+              -67.000154,-32.495609,0
+              -67.000161,-32.495466,0
+              -67.000252,-32.495372,0
+              -67.000378,-32.495338,0
+              -67.000528,-32.495402,0
+              -67.00072,-32.495522,0
+              -67.000992,-32.495537,0
+              -67.001584,-32.495419,0
+              -67.002246,-32.495298,0
+              -67.002932,-32.495385,0
+              -67.00379,-32.495365,0
+              -67.004511,-32.495435,0
+              -67.004963,-32.495623,0
+              -67.008101,-32.497608,0
+              -67.00861,-32.49793,0
+              -67.008716,-32.497996,0
+              -67.008918,-32.498121,0
+              -67.009137,-32.498257,0
+            </coordinates>
+          </LineString>
+        </MultiGeometry>
+      </Placemark>
+      <Placemark>
+        <name>Camino de acceso al Camping</name>
+        <description><![CDATA[descripción: <br>Name: Camino vehicular]]></description>
+        <styleUrl>#line-FFAA00-2000</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="Name">
+            <value>Camino vehicular</value>
+          </Data>
+        </ExtendedData>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -66.962301,-32.47391,0
+            -66.962268,-32.473668,0
+            -66.962213,-32.473355,0
+            -66.962023,-32.472726,0
+            -66.962391,-32.472369,0
+            -66.962647,-32.472129,0
+            -66.963004,-32.47187,0
+            -66.963251,-32.471658,0
+            -66.963339,-32.471526,0
+            -66.963721,-32.47109,0
+            -66.963989,-32.470774,0
+            -66.964787,-32.470011,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Sendero Flora</name>
+        <description><![CDATA[descripción: <br>Name: Sendero Flora]]></description>
+        <styleUrl>#line-0000FF-2000</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="Name">
+            <value>Sendero Flora</value>
+          </Data>
+        </ExtendedData>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -67.00861,-32.49793,0
+            -67.008618,-32.497878,0
+            -67.008636,-32.497747,0
+            -67.008649,-32.497664,0
+            -67.00862,-32.497525,0
+            -67.008611,-32.497488,0
+            -67.008656,-32.497412,0
+            -67.008726,-32.497366,0
+            -67.008795,-32.497289,0
+            -67.008841,-32.497208,0
+            -67.008795,-32.49711,0
+            -67.008751,-32.497019,0
+            -67.008756,-32.49693,0
+            -67.008791,-32.496839,0
+            -67.008873,-32.496595,0
+            -67.008949,-32.496513,0
+            -67.00899,-32.496531,0
+            -67.009051,-32.496596,0
+            -67.009146,-32.496663,0
+            -67.009249,-32.496698,0
+            -67.009316,-32.496568,0
+            -67.009439,-32.496518,0
+            -67.009623,-32.496419,0
+            -67.009739,-32.496339,0
+            -67.009866,-32.496251,0
+            -67.009776,-32.49627,0
+            -67.009654,-32.496342,0
+            -67.009534,-32.496423,0
+            -67.009434,-32.496486,0
+            -67.009338,-32.496487,0
+            -67.009371,-32.496358,0
+            -67.009392,-32.496174,0
+            -67.009395,-32.496044,0
+            -67.009375,-32.495906,0
+            -67.009329,-32.495777,0
+            -67.009401,-32.495614,0
+            -67.009534,-32.495519,0
+            -67.009703,-32.49538,0
+            -67.009906,-32.49521,0
+            -67.010066,-32.495077,0
+            -67.009941,-32.495094,0
+            -67.009804,-32.495233,0
+            -67.00963,-32.495361,0
+            -67.009515,-32.495422,0
+            -67.009386,-32.495537,0
+            -67.009306,-32.495453,0
+            -67.009278,-32.495412,0
+            -67.009137,-32.49541,0
+            -67.00909,-32.49543,0
+            -67.009035,-32.495438,0
+            -67.008937,-32.495491,0
+            -67.00883,-32.495474,0
+            -67.00871,-32.495441,0
+            -67.008592,-32.495487,0
+            -67.008492,-32.495531,0
+            -67.008415,-32.495552,0
+            -67.008373,-32.495585,0
+            -67.008359,-32.495665,0
+            -67.008365,-32.495732,0
+            -67.008344,-32.49581,0
+            -67.008376,-32.495836,0
+            -67.008384,-32.495864,0
+            -67.008374,-32.495905,0
+            -67.008329,-32.495937,0
+            -67.008281,-32.496019,0
+            -67.008254,-32.496102,0
+            -67.008257,-32.496176,0
+            -67.008223,-32.496224,0
+            -67.008153,-32.496273,0
+            -67.008084,-32.496295,0
+            -67.00804,-32.496351,0
+            -67.008008,-32.496415,0
+            -67.007985,-32.496504,0
+            -67.007993,-32.496544,0
+            -67.007987,-32.496698,0
+            -67.007975,-32.496803,0
+            -67.008055,-32.496835,0
+            -67.008091,-32.496901,0
+            -67.008079,-32.496975,0
+            -67.008099,-32.497044,0
+            -67.008087,-32.497101,0
+            -67.008103,-32.497143,0
+            -67.008119,-32.497233,0
+            -67.00809,-32.497284,0
+            -67.008062,-32.49734,0
+            -67.008033,-32.497376,0
+            -67.008058,-32.497414,0
+            -67.00811,-32.497469,0
+            -67.00819,-32.497497,0
+            -67.008255,-32.497528,0
+            -67.008318,-32.497567,0
+            -67.008383,-32.49761,0
+            -67.008461,-32.4977,0
+            -67.008503,-32.49775,0
+            -67.008574,-32.497778,0
+            -67.008618,-32.497878,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Sendero</name>
+        <description><![CDATA[descripción: <br>Name: Sendero]]></description>
+        <styleUrl>#line-000000-2000</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="Name">
+            <value>Sendero</value>
+          </Data>
+        </ExtendedData>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -67.00861,-32.49793,0
+            -67.008557,-32.498082,0
+            -67.008416,-32.498289,0
+            -67.008375,-32.498494,0
+            -67.00833,-32.498936,0
+            -67.008418,-32.499157,0
+            -67.008595,-32.499281,0
+            -67.008686,-32.499345,0
+            -67.00923,-32.499616,0
+            -67.009455,-32.499951,0
+            -67.009572,-32.500014,0
+            -67.009716,-32.50003,0
+            -67.009917,-32.499848,0
+            -67.010215,-32.49962,0
+            -67.010396,-32.499531,0
+            -67.010643,-32.499492,0
+            -67.010801,-32.499482,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Sendero Guanacos (solo con guías)</name>
+        <description><![CDATA[descripción: <br>Name: Sendero Guanacos (solo con guías)]]></description>
+        <styleUrl>#line-00AA00-1000</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="Name">
+            <value>Sendero Guanacos (solo con guías)</value>
+          </Data>
+        </ExtendedData>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -67.008595,-32.499281,0
+            -67.008574,-32.499335,0
+            -67.008436,-32.499687,0
+            -67.00808,-32.500034,0
+            -67.0079,-32.500451,0
+            -67.007757,-32.500863,0
+            -67.007681,-32.501274,0
+            -67.007426,-32.501655,0
+            -67.007509,-32.50206,0
+            -67.007447,-32.502516,0
+            -67.007258,-32.502937,0
+            -67.007016,-32.503323,0
+            -67.006852,-32.503614,0
+            -67.006962,-32.504015,0
+            -67.007192,-32.504411,0
+            -67.007133,-32.504841,0
+            -67.007241,-32.505248,0
+            -67.007603,-32.50554,0
+            -67.007766,-32.505947,0
+            -67.007902,-32.506318,0
+            -67.007757,-32.506749,0
+            -67.007627,-32.507178,0
+            -67.007609,-32.507614,0
+            -67.007274,-32.507955,0
+            -67.006855,-32.507936,0
+            -67.006505,-32.508152,0
+            -67.006655,-32.508578,0
+            -67.006685,-32.509004,0
+            -67.006693,-32.509407,0
+            -67.00633,-32.509656,0
+            -67.006441,-32.510056,0
+            -67.006507,-32.510475,0
+            -67.006532,-32.510873,0
+            -67.006482,-32.5113,0
+            -67.006501,-32.51172,0
+            -67.006554,-32.512151,0
+            -67.006505,-32.512557,0
+            -67.006756,-32.512932,0
+            -67.006809,-32.513318,0
+            -67.006674,-32.513675,0
+            -67.006691,-32.514056,0
+            -67.006697,-32.514472,0
+            -67.006917,-32.514833,0
+            -67.007295,-32.515076,0
+            -67.007673,-32.515383,0
+            -67.007689,-32.515728,0
+            -67.00803,-32.515962,0
+            -67.008288,-32.51604,0
+            -67.008502,-32.515988,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Sendero</name>
+        <description><![CDATA[descripción: <br>Name: Sendero]]></description>
+        <styleUrl>#line-000000-2000</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="Name">
+            <value>Sendero</value>
+          </Data>
+        </ExtendedData>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -67.014025,-32.501588,0
+            -67.014063,-32.501573,0
+            -67.01409,-32.501563,0
+            -67.014124,-32.501561,0
+            -67.014153,-32.501573,0
+            -67.014212,-32.501595,0
+            -67.014267,-32.501623,0
+            -67.014349,-32.501582,0
+            -67.014412,-32.501455,0
+            -67.014438,-32.501345,0
+            -67.014412,-32.501239,0
+            -67.014345,-32.501138,0
+            -67.014345,-32.501055,0
+            -67.014437,-32.500927,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Sendero Miradores</name>
+        <description><![CDATA[descripción: <br>Name: Sendero Miradores]]></description>
+        <styleUrl>#line-FFFF00-2000</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="Name">
+            <value>Sendero Miradores</value>
+          </Data>
+        </ExtendedData>
+        <MultiGeometry>
+          <LineString>
+            <tessellate>1</tessellate>
+            <coordinates>
+              -67.011547,-32.500164,0
+              -67.011421,-32.499948,0
+              -67.010982,-32.499585,0
+              -67.010801,-32.499482,0
+              -67.010128,-32.498993,0
+              -67.010092,-32.498977,0
+              -67.009959,-32.498925,0
+              -67.009919,-32.498846,0
+              -67.009861,-32.498806,0
+              -67.009799,-32.498756,0
+              -67.009746,-32.498726,0
+              -67.009727,-32.498664,0
+              -67.009707,-32.498578,0
+              -67.009806,-32.498579,0
+              -67.009876,-32.498706,0
+              -67.00996,-32.49878,0
+              -67.010093,-32.498793,0
+              -67.010234,-32.498758,0
+              -67.010414,-32.498673,0
+              -67.010535,-32.498659,0
+              -67.010654,-32.498676,0
+              -67.010795,-32.4987,0
+              -67.010994,-32.498732,0
+              -67.011151,-32.498722,0
+              -67.011299,-32.49876,0
+              -67.011416,-32.498791,0
+              -67.011576,-32.498835,0
+              -67.011705,-32.498872,0
+              -67.011816,-32.498905,0
+              -67.011984,-32.498924,0
+              -67.012202,-32.498941,0
+              -67.012208,-32.499014,0
+              -67.012195,-32.499133,0
+              -67.012028,-32.499394,0
+              -67.01191,-32.499613,0
+              -67.011836,-32.499794,0
+              -67.011667,-32.499999,0
+              -67.011547,-32.500164,0
+              -67.011517,-32.500277,0
+              -67.011516,-32.500277,0
+              -67.011544,-32.500317,0
+              -67.011758,-32.500351,0
+              -67.011853,-32.500366,0
+              -67.011958,-32.500376,0
+              -67.01204,-32.500426,0
+              -67.012197,-32.500492,0
+              -67.012313,-32.500556,0
+              -67.012426,-32.500729,0
+              -67.01251,-32.500796,0
+              -67.012703,-32.500823,0
+              -67.012898,-32.500889,0
+              -67.012983,-32.500915,0
+              -67.01306,-32.500954,0
+              -67.0131,-32.500993,0
+              -67.01316,-32.500993,0
+              -67.013202,-32.500995,0
+              -67.013246,-32.501034,0
+              -67.013313,-32.501077,0
+              -67.013355,-32.501107,0
+              -67.013429,-32.501124,0
+              -67.013504,-32.50112,0
+              -67.013585,-32.501093,0
+              -67.013658,-32.501088,0
+              -67.013696,-32.501094,0
+              -67.013732,-32.501098,0
+              -67.013756,-32.501102,0
+              -67.013768,-32.50113,0
+              -67.013771,-32.501163,0
+              -67.013777,-32.501195,0
+              -67.013786,-32.501232,0
+              -67.013776,-32.501289,0
+              -67.013775,-32.501365,0
+              -67.013794,-32.501427,0
+              -67.013846,-32.501471,0
+              -67.013895,-32.501494,0
+              -67.013937,-32.501519,0
+              -67.013967,-32.501546,0
+              -67.013986,-32.501582,0
+              -67.014025,-32.501588,0
+              -67.014252,-32.501765,0
+              -67.014229,-32.501944,0
+              -67.014452,-32.502264,0
+              -67.014566,-32.502416,0
+              -67.014563,-32.502543,0
+              -67.014532,-32.502573,0
+              -67.014515,-32.502609,0
+              -67.01443,-32.502674,0
+              -67.014353,-32.50271,0
+              -67.014309,-32.50276,0
+              -67.01426,-32.502781,0
+              -67.014202,-32.502808,0
+              -67.014039,-32.502696,0
+              -67.013856,-32.502633,0
+              -67.013631,-32.502603,0
+              -67.013441,-32.502537,0
+              -67.013218,-32.502484,0
+              -67.013058,-32.502341,0
+              -67.013038,-32.502263,0
+              -67.012998,-32.502193,0
+              -67.012956,-32.502088,0
+              -67.012922,-32.502008,0
+              -67.012952,-32.501811,0
+              -67.012917,-32.501618,0
+              -67.012907,-32.501454,0
+              -67.01308,-32.501332,0
+              -67.013092,-32.501175,0
+              -67.012903,-32.501011,0
+              -67.012898,-32.500889,0
+            </coordinates>
+          </LineString>
+          <LineString>
+            <tessellate>1</tessellate>
+            <coordinates>
+              -67.011517,-32.500277,0
+            </coordinates>
+          </LineString>
+          <LineString>
+            <tessellate>1</tessellate>
+            <coordinates>
+              -67.009707,-32.498578,0
+              -67.009197,-32.498381,0
+              -67.009137,-32.498257,0
+            </coordinates>
+          </LineString>
+        </MultiGeometry>
+      </Placemark>
+      <Placemark>
+        <name>Sendero Farallones (solo con guías)</name>
+        <description><![CDATA[descripción: <br>Name: Sendero Farallones (solo con guías)]]></description>
+        <styleUrl>#line-0000FF-1000</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="Name">
+            <value>Sendero Farallones (solo con guías)</value>
+          </Data>
+        </ExtendedData>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -67.014302,-32.520051,0
+            -67.014356,-32.519743,0
+            -67.014407,-32.519513,0
+            -67.014382,-32.519232,0
+            -67.014434,-32.518923,0
+            -67.014527,-32.51851,0
+            -67.014686,-32.518261,0
+            -67.014838,-32.518001,0
+            -67.01517,-32.517723,0
+            -67.015092,-32.51718,0
+            -67.01482,-32.516965,0
+            -67.014708,-32.516431,0
+            -67.014778,-32.516087,0
+            -67.014748,-32.515956,0
+            -67.014762,-32.515877,0
+            -67.014851,-32.515827,0
+            -67.014894,-32.515758,0
+            -67.014875,-32.515636,0
+            -67.014828,-32.515528,0
+            -67.0147,-32.515435,0
+            -67.01459,-32.515142,0
+            -67.014797,-32.514912,0
+            -67.01513,-32.514437,0
+            -67.015533,-32.514133,0
+            -67.015436,-32.513884,0
+            -67.015563,-32.513875,0
+            -67.01584,-32.513984,0
+            -67.016101,-32.514027,0
+            -67.016458,-32.514059,0
+            -67.016591,-32.513927,0
+            -67.016561,-32.513474,0
+            -67.016641,-32.513203,0
+            -67.017576,-32.512854,0
+            -67.017665,-32.5127,0
+            -67.017559,-32.512494,0
+            -67.017574,-32.512132,0
+            -67.017722,-32.511977,0
+            -67.017947,-32.511762,0
+            -67.018125,-32.511535,0
+            -67.018162,-32.511223,0
+            -67.018097,-32.511173,0
+            -67.018298,-32.510942,0
+            -67.018478,-32.510616,0
+            -67.018739,-32.510588,0
+            -67.01886,-32.510445,0
+            -67.018868,-32.510212,0
+            -67.018925,-32.510118,0
+            -67.019042,-32.510095,0
+            -67.019114,-32.509924,0
+            -67.019209,-32.509729,0
+            -67.019328,-32.509501,0
+            -67.019216,-32.509309,0
+            -67.019234,-32.509198,0
+            -67.01944,-32.509078,0
+            -67.019683,-32.508849,0
+            -67.019969,-32.508333,0
+            -67.019982,-32.507999,0
+            -67.019884,-32.507687,0
+            -67.02004,-32.507557,0
+            -67.020602,-32.507266,0
+            -67.021197,-32.506903,0
+            -67.021598,-32.506431,0
+            -67.021647,-32.506084,0
+            -67.021649,-32.505876,0
+            -67.021517,-32.505599,0
+            -67.021315,-32.505375,0
+            -67.021186,-32.504928,0
+            -67.021081,-32.504664,0
+            -67.020946,-32.504554,0
+            -67.020725,-32.504442,0
+            -67.020583,-32.504198,0
+            -67.020568,-32.503959,0
+            -67.020573,-32.503786,0
+            -67.020439,-32.503679,0
+            -67.019993,-32.503559,0
+            -67.019795,-32.503462,0
+            -67.019667,-32.50332,0
+            -67.019477,-32.503163,0
+            -67.019303,-32.502958,0
+            -67.019084,-32.502869,0
+            -67.018832,-32.502743,0
+            -67.018715,-32.502738,0
+            -67.018654,-32.502717,0
+            -67.018626,-32.502651,0
+            -67.018661,-32.502589,0
+            -67.018611,-32.50253,0
+            -67.018536,-32.502487,0
+            -67.018486,-32.502426,0
+            -67.018498,-32.502329,0
+            -67.018553,-32.502277,0
+            -67.018611,-32.502265,0
+            -67.018632,-32.5022,0
+            -67.018607,-32.502128,0
+            -67.018518,-32.502089,0
+            -67.018377,-32.502093,0
+            -67.018298,-32.502095,0
+            -67.018187,-32.502062,0
+            -67.018101,-32.501973,0
+            -67.017962,-32.50196,0
+            -67.017857,-32.501953,0
+            -67.017725,-32.501892,0
+            -67.017606,-32.501858,0
+            -67.017576,-32.501847,0
+            -67.01753,-32.501794,0
+            -67.017503,-32.50171,0
+            -67.017479,-32.501626,0
+            -67.01748,-32.50155,0
+            -67.017445,-32.501475,0
+            -67.017388,-32.501396,0
+            -67.017333,-32.501254,0
+            -67.017326,-32.501064,0
+            -67.017296,-32.500916,0
+            -67.017433,-32.500775,0
+            -67.017492,-32.500598,0
+            -67.017497,-32.500546,0
+            -67.017397,-32.500548,0
+            -67.017352,-32.50058,0
+            -67.017339,-32.500625,0
+            -67.017191,-32.500584,0
+            -67.017051,-32.500625,0
+            -67.016998,-32.500617,0
+            -67.016945,-32.500477,0
+            -67.016802,-32.500472,0
+            -67.016735,-32.500444,0
+            -67.016752,-32.500291,0
+            -67.016534,-32.50025,0
+            -67.016324,-32.500285,0
+            -67.016171,-32.500424,0
+            -67.015967,-32.500498,0
+            -67.015789,-32.500527,0
+            -67.015665,-32.500554,0
+            -67.015559,-32.500583,0
+            -67.015346,-32.500585,0
+            -67.015244,-32.50074,0
+            -67.015028,-32.500697,0
+            -67.014612,-32.500815,0
+            -67.014437,-32.500927,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Sendero Huellas (solo con guías)</name>
+        <description><![CDATA[descripción: <br>Name: Sendero Huellas (solo con guías)]]></description>
+        <styleUrl>#line-FF0000-1000</styleUrl>
+        <ExtendedData>
+          <Data name="descripción">
+            <value/>
+          </Data>
+          <Data name="Name">
+            <value>Sendero Huellas (solo con guías)</value>
+          </Data>
+        </ExtendedData>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -67.022022,-32.497503,0
+            -67.021895,-32.497653,0
+            -67.021685,-32.497617,0
+            -67.021467,-32.497582,0
+            -67.021277,-32.497663,0
+            -67.021067,-32.497705,0
+            -67.021022,-32.497888,0
+            -67.020945,-32.498065,0
+            -67.0208,-32.498207,0
+            -67.020587,-32.498208,0
+            -67.020412,-32.498315,0
+            -67.020233,-32.498428,0
+            -67.020038,-32.498505,0
+            -67.019888,-32.498637,0
+            -67.019683,-32.498698,0
+            -67.019508,-32.498807,0
+            -67.019302,-32.49886,0
+            -67.01914,-32.498982,0
+            -67.019017,-32.49913,0
+            -67.018977,-32.499315,0
+            -67.018838,-32.499462,0
+            -67.018657,-32.499582,0
+            -67.018528,-32.499727,0
+            -67.018313,-32.499677,0
+            -67.0181,-32.499683,0
+            -67.017893,-32.499738,0
+            -67.017772,-32.49989,0
+            -67.017592,-32.500002,0
+            -67.017605,-32.500193,0
+            -67.017532,-32.50037,0
+            -67.017362,-32.500485,0
+            -67.017152,-32.500547,0
+            -67.016945,-32.500477,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
