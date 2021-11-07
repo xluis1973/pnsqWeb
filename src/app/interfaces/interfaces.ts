@@ -73,3 +73,12 @@ export interface Grupo{
     activo:boolean
 
 }
+
+export interface Marker{
+    position: {
+        lat: number,
+        lng: number,
+    
+    };
+    title: string
+}

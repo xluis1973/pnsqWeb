@@ -1,9 +1,10 @@
-import { makeBindingParser } from '@angular/compiler';
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { Loader } from "@googlemaps/js-api-loader"
+
+import {  Component, OnInit } from '@angular/core';
+
 
 const url ="https://developers.google.com/maps/documentation/javascript/examples/kml/westcampus.kml";
 
+declare var google;
 
 
 @Component({
@@ -13,55 +14,15 @@ const url ="https://developers.google.com/maps/documentation/javascript/examples
 })
 
 export class MonitoreoPage implements OnInit {
-
+map=null;
 public btSelectM:String="outline";
 public btSelectS:String="outline";
 public btSelectH:String="outline";
   constructor() { }
   
-
-   intMap(): void {
-
-    let map: google.maps.Map;
-    map = new google.maps.Map(document.getElementById("map") as HTMLElement, {
-      center: new google.maps.LatLng(-19.257753, 146.823688),
-      zoom: 2,
-      mapTypeId: "terrain",
-    });
-   console.log('Construyendo mapa');
-    const kmlLayer = new google.maps.KmlLayer({
-      suppressInfoWindows: true,
-      preserveViewport: false,
-      map,
-      url,
-    });
-  
-    kmlLayer.addListener("click", (event) => {
-      const content = event.featureData.infoWindowHtml;
-      const testimonial = document.getElementById("capture") as HTMLElement;
-  
-      testimonial.innerHTML = content;
-    });
+  ngOnInit() { 
+    this.loadMap();
   }
- 
-
-
- /* ngAfterViewInit(): void {
-    let map: google.maps.Map;
-    const loader = new Loader({
-      apiKey: "AIzaSyDJ6jdBlk2rzwCtW-YETggCQmPQo5vN_oc",
-      version: "weekly",
-      
-    });
-    loader.load().then(() => {
-      map = new google.maps.Map(document.getElementById("map") as HTMLElement, {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8,
-      });
-    });
-  }
-*/
-  ngOnInit() { }
 
   onClickM(){
       this.btSelectM="solid";
@@ -79,6 +40,22 @@ public btSelectH:String="outline";
     this.btSelectH="solid";  
   }
 
+  loadMap(){
+    const mapEle:HTMLElement = document.getElementById('map');
+    const myLatLng={lat: -33.1807797, lng: -66.3179661};
+
+    this.map=new google.maps.Map(mapEle, {
+      center: myLatLng,
+      zoom: 12
+    });
+
+    google.maps.event.addListenerOnce(this.map,'idle',()=>{
+      
+      mapEle.classList.add('show-map');
+    });
+
+    
+  }
   
   }
 
