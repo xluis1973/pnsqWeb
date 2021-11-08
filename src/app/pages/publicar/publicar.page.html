@@ -39,7 +39,7 @@
                 <ion-list>
                   
                   <ion-item>
-                    <ion-label>Título</ion-label>
+                    <ion-label position="floating">Título</ion-label>
                     <ion-input name="titulo"
                     required
                     
@@ -48,67 +48,24 @@
                   </ion-item>
     
                   <ion-item>
-                    <ion-label>Fecha de Vencimiento</ion-label>
+                    <ion-label >Fecha de Vencimiento</ion-label>
                     <ion-input name="venc"
-                               type="text"
+                               type="date"
                                ></ion-input>
                   </ion-item>
   
                   <ion-item>
-                      <ion-label>Nombre</ion-label>
-                      <ion-input name="nombre"
-                                 type="text"
-                                 ></ion-input>
-                    </ion-item>
-  
-                    <ion-item>
-                      <ion-label>Dirección</ion-label>
-                      <ion-input name="direccion"
-                                 type="text"
-                                 ></ion-input>
-                    </ion-item>
-  
-                    <ion-item>
-                      <ion-label>Teléfono</ion-label>
-                      <ion-input name="telefono"
-                                 type="text"
-                                 ></ion-input>
-                    </ion-item>
-  
-                    <ion-item>
-                      <ion-label>EMail</ion-label>
-                      <ion-input name="email"
-                                 type="email"
-                                 ></ion-input>
-                    </ion-item>
-  
-                    <ion-item>
-                      <ion-label>Password</ion-label>
-                      <ion-input name="password"
-                                 type="password"
-                                 ></ion-input>
-                    </ion-item>
-    
-                    <ion-item>
-                      <ion-label>Nro. Habilitación</ion-label>
-                      <ion-input name="habilitacion"
-                                 type="number"
-                                 ></ion-input>
-                    </ion-item>
-  
-                    <ion-item>
-                      <ion-label>Alta Habilitación</ion-label>
-                      <ion-input name="altaHabilitacion"
-                                 type="date"
-                                 ></ion-input>
-                    </ion-item>
-  
-                    <ion-item>
-                      <ion-label>Vencimiento Habilitación</ion-label>
-                      <ion-input name="vtoHabilitacion"
-                                 type="date"
-                                 ></ion-input>
-                    </ion-item>
+                   
+                    <ion-icon lazy="true" slot="start" name="cloud-upload-outline"></ion-icon>
+                    <ion-label slot="end">Subir imagen</ion-label>
+                    <input type="file" (change)="loadImageFromDevice($event)" id="file-input"
+                      accept="image/png, image/jpeg">
+                  </ion-item>
+                  
+                  <ion-item>
+                    <ion-label>Nota</ion-label>
+                    <ion-textarea rows="6" cols="20" placeholder="Enter any notes here..."></ion-textarea>
+                  </ion-item>
     
                 </ion-list>
             </ion-col>

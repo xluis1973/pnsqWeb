@@ -64,26 +64,29 @@ public btSelectH:String="outline";
   onClickM(){
       this.btSelectM="solid";
       this.btSelectS="outline";
-      this.btSelectH="outline";   
+      this.btSelectH="outline";
+      this.map.setMapTypeId('terrain');   
       }
   onClickS(){
     this.btSelectM="outline";
     this.btSelectS="solid";
     this.btSelectH="outline";  
+    this.map.setMapTypeId('satellite');
   }   
   onClickH(){
     this.btSelectM="outline";
     this.btSelectS="outline";
     this.btSelectH="solid";  
+    this.map.setMapTypeId('hybrid');
   }
 
-  loadMap(){
+  async loadMap(){
     const mapEle:HTMLElement = document.getElementById('map');
-    const myLatLng={lat: -32.473504, lng: -66.9727219};
+    const myLatLng={lat: -32.48540517655754, lng: -66.96221829130207};
 
-    this.map=new google.maps.Map(mapEle, {
+    this.map= await new google.maps.Map(mapEle, {
       center: myLatLng,
-      zoom: 12
+      zoom: 50
     });
 
 
@@ -95,6 +98,12 @@ public btSelectH:String="outline";
           clickable : false
     }); 
 
+    setTimeout(() => {
+      this.map.setCenter(new google.maps.LatLng(-32.48540517655754, -66.96221829130207));
+      this.map.setZoom(12);
+      
+}, 3000);
+   
     google.maps.event.addListenerOnce(this.map,'idle',()=>{
       
       mapEle.classList.add('show-map');
@@ -110,7 +119,7 @@ public btSelectH:String="outline";
       
     });
   }
-
+//agregar marcador
   addMarker(marker:Marker){
     return new google.maps.Marker({
       position: marker.position,
