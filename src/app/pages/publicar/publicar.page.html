@@ -30,7 +30,7 @@
       </ion-col>
       <ion-col size="8">
         
-        <form #formulario="ngForm">
+        <form (ngSubmit)="crearPublicacion(formulario)" #formulario="ngForm">
         
                 
           <ion-row>
@@ -42,7 +42,7 @@
                     <ion-label position="floating">Título</ion-label>
                     <ion-input name="titulo"
                     required
-                    
+                    [(ngModel)]="publicacion.titulo"
                               type="text"
                                ></ion-input>
                   </ion-item>
@@ -50,6 +50,7 @@
                   <ion-item>
                     <ion-label >Fecha de Vencimiento</ion-label>
                     <ion-input name="venc"
+                    [(ngModel)]="publicacion.fechaVto"
                                type="date"
                                ></ion-input>
                   </ion-item>
@@ -64,7 +65,8 @@
                   
                   <ion-item>
                     <ion-label>Nota</ion-label>
-                    <ion-textarea rows="6" cols="20" placeholder="Enter any notes here..."></ion-textarea>
+                    <ion-textarea [(ngModel)]="publicacion.cuerpo" [ngModelOptions]="{standalone: true}" rows="6" cols="20" placeholder="Enter any notes here..." 
+                   ></ion-textarea>
                   </ion-item>
     
                 </ion-list>

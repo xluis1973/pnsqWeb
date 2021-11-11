@@ -4,7 +4,7 @@ import {  Component, OnInit } from '@angular/core';
 import { Marker } from '../../interfaces/interfaces';
 
 
-const url ="https://developers.google.com/maps/documentation/javascript/examples/kml/westcampus.kml";
+
 
 declare var google;
 
@@ -86,18 +86,20 @@ public btSelectH:String="outline";
 
     this.map= await new google.maps.Map(mapEle, {
       center: myLatLng,
-      zoom: 50
+      zoom: 14
     });
 
-
-  var ctaLayer = new google.maps.KmlLayer({
+//https://drive.google.com/file/d/1aUAxnV5IBJoZnCLK3-qJFfUoZpsqSlpA/view?usp=sharing
+  var ctaLayer = await new google.maps.KmlLayer({
       url: 'https://drive.google.com/uc?id=1aUAxnV5IBJoZnCLK3-qJFfUoZpsqSlpA',
      suppressInfoWindows: true,  
         map:this.map,
         zindex: 0,
           clickable : false
     }); 
+    console.log(ctaLayer);
 
+    ctaLayer.setMap(this.map);
     setTimeout(() => {
       this.map.setCenter(new google.maps.LatLng(-32.48540517655754, -66.96221829130207));
       this.map.setZoom(12);
@@ -126,6 +128,7 @@ public btSelectH:String="outline";
       map: this.map,
       title: marker.title
     });
+  
   }
   
  

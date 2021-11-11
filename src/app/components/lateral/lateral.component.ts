@@ -19,4 +19,8 @@ export class LateralComponent implements OnInit {
   administracion(){
     this.navCrl.navigateRoot('/admin',{animated:true});
   }
+
+  publicar(){
+    this.navCrl.navigateRoot("/publicar",{animated:true});
+  }
 }
