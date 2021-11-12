@@ -7,13 +7,18 @@ import { IonicModule } from '@ionic/angular';
 import { ReportesPageRoutingModule } from './reportes-routing.module';
 
 import { ReportesPage } from './reportes.page';
+import { ComponentsModule } from 'src/app/components/components/components.module';
+import {ChartsModule} from 'ng2-charts';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ReportesPageRoutingModule
+    ReportesPageRoutingModule,
+    ComponentsModule,
+    ChartsModule
+    
   ],
   declarations: [ReportesPage]
 })
