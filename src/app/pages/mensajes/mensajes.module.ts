@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { MensajesPageRoutingModule } from './mensajes-routing.module';
 
 import { MensajesPage } from './mensajes.page';
+import { ComponentsModule } from 'src/app/components/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MensajesPageRoutingModule
+    MensajesPageRoutingModule, 
+    ComponentsModule
   ],
   declarations: [MensajesPage]
 })

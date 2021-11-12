@@ -60,7 +60,7 @@ export interface Mensaje{
     identificador:string,
     mensaje:string,
     remitente:string,
-    fechaVto:Date,
+    fechaEnvio:Date,
     ultimaUbicacion:string
 }
 
