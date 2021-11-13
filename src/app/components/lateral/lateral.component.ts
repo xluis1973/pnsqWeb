@@ -26,4 +26,7 @@ export class LateralComponent implements OnInit {
   mensajes(){
     this.navCrl.navigateRoot("/mensajes",{animated:true});
   }
+  reportes(){
+    this.navCrl.navigateRoot("/reportes",{animated:true});
+  }
 }

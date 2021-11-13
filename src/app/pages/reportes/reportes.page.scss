@@ -1,6 +1,12 @@
-chart-container {
-    position: relative;
-    margin: auto;
+.graficos{
+   
+    display: flex;
+    flex-direction: column;
+    width: 65% !important;
+    margin: 5 !important;
+    background-color:rgb(195, 245, 242);
+    border-top-width: 3px !important;
+    border-top-color: rgb(57, 5, 179) !important;
     
-
+  
 }

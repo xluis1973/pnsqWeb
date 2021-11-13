@@ -1,48 +1,77 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Charts.js in Ionic 5
-    </ion-title>
+    <ion-avatar slot="start">
+      <img src="/assets/logo.png" />
+    </ion-avatar>
+    
+    <ion-buttons slot="end">
+      <ion-button (click)="onClickM()" [fill] ="btSelectM" shape="round">
+       Año
+      </ion-button>
+      <ion-button (click)="onClickS()" [fill] ="btSelectS"   shape="round">
+       Mes
+      </ion-button>
+      <ion-button (click)="onClickH()" [fill] ="btSelectH" shape="round">
+        Hoy
+      </ion-button>
+      
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div class="ion-padding">
-    <ion-card>
-      <ion-card-header>
-        Bar Chart
-      </ion-card-header>
-      <ion-card-content>
-        <div style="display: block">
-          <canvas baseChart
-            [datasets]="barChartData"
-            [labels]="barChartLabels"
-            [options]="barChartOptions"
-            [plugins]="barChartPlugins"
-            [chartType]="barChartType">
-          </canvas>
-        </div>
-        
-      </ion-card-content>
-    </ion-card>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="4">
 
-    <ion-card>
-      <ion-card-header>
-        Doughnut Chart
-      </ion-card-header>
-      <ion-card-content>
+          <app-lateral></app-lateral>
+          
 
-        <canvas #doughnutCanvas style="position: relative; height:20vh; width:40vw"></canvas>
-      </ion-card-content>
-    </ion-card>
+        </ion-col>
+        <ion-col size="8">
+          <ion-card class="graficos">
+            <ion-card-header>
+              Visitantes 2021
+            </ion-card-header>
+            <ion-card-content>
+              <div >
+                <canvas baseChart
+                  [datasets]="barChartData"
+                  [labels]="barChartLabels"
+                  [options]="barChartOptions"
+                  [plugins]="barChartPlugins"
+                  [chartType]="barChartType">
+                </canvas>
+              </div>
+              
+            </ion-card-content>
+          </ion-card>
+          <ion-card class="graficos">
+            <ion-card-header>
+              Senderos visitados
+            </ion-card-header>
+            <ion-card-content>
+              <div >
+                <canvas baseChart
+                  [datasets]="tartaChartData"
+                  [labels]="tartaChartLabels"
+                  [options]="tartaChartOptions"
+                  [plugins]="tartaChartPlugins"
+                  [chartType]="tartaChartType">
+                </canvas>
+              </div>
+              
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+   
+
+    
  
-    <ion-card>
-      <ion-card-header>
-        Line Chart
-      </ion-card-header>
-      <ion-card-content>
-        <canvas #lineCanvas style="position: relative; height:20vh; width:40vw"></canvas>
-      </ion-card-content>
-    </ion-card>
+   
   </div>
 </ion-content>
+<app-footer indice="4"></app-footer>
