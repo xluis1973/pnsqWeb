@@ -25,7 +25,29 @@ export class PublicarPage implements OnInit {
   constructor() {
 
   }
-
+  public btSelectM:String="outline";
+  public btSelectS:String="outline";
+  public btSelectH:String="outline";
+ 
+ 
+  onClickM(){
+    this.btSelectM="solid";
+    this.btSelectS="outline";
+    this.btSelectH="outline";
+      
+    }
+onClickS(){
+  this.btSelectM="outline";
+  this.btSelectS="solid";
+  this.btSelectH="outline";  
+ 
+}   
+onClickH(){
+  this.btSelectM="outline";
+  this.btSelectS="outline";
+  this.btSelectH="solid";  
+ 
+}
   
   ngOnInit() {
   }

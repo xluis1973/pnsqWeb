@@ -17,11 +17,34 @@ import { Label } from 'ng2-charts';
 })
 export class ReportesPage implements OnInit {
 
-  btSelectM="solid";
+  
+  public btSelectM:String="solid";
+  public btSelectS:String="outline";
+  public btSelectH:String="outline";
+  constructor() { }
+ 
+  onClickM(){
+    this.btSelectM="solid";
+    this.btSelectS="outline";
+    this.btSelectH="outline";
+      
+    }
+onClickS(){
+  this.btSelectM="outline";
+  this.btSelectS="solid";
+  this.btSelectH="outline";  
+ 
+}   
+onClickH(){
+  this.btSelectM="outline";
+  this.btSelectS="outline";
+  this.btSelectH="solid";  
+ 
+}
   //Gráfico de Barras
   //Aquí leería de un servicio
   public barChartLabels = ['Abril', 'Mayo', 'Junio', 'Agosto', 'Septiembre', 'Octubre'];
-  public barChartType = 'bar';
+  public barChartType = 'bar' as ChartType;
   
   public barChartPlugins =null;
 
@@ -31,12 +54,12 @@ export class ReportesPage implements OnInit {
   ];
 
   barChartOptions = { legend: { display: true, labels: { fontColor: 'black' } }};
-  constructor() { }
+ 
 
   //Gráfico circular
   //Aquí leería desde un servicio
   public tartaChartLabels = ['Flora', 'Guanacos', 'Miradores', 'Farallones', 'Huellas'];
-  public tartaChartType = 'pie';
+  public tartaChartType = 'pie' as ChartType;
   
   public tartaChartPlugins =null;
 

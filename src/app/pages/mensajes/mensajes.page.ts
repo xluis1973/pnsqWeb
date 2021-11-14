@@ -7,10 +7,29 @@ import { Mensaje } from 'src/app/interfaces/interfaces';
   styleUrls: ['./mensajes.page.scss'],
 })
 export class MensajesPage implements OnInit, AfterViewInit {
-
+   btSelectM:String="outline";
+   btSelectS:String="outline";
+   btSelectH:String="outline";
   constructor() { }
  
-;
+  onClickM(){
+    this.btSelectM="solid";
+    this.btSelectS="outline";
+    this.btSelectH="outline";
+      
+    }
+onClickS(){
+  this.btSelectM="outline";
+  this.btSelectS="solid";
+  this.btSelectH="outline";  
+ 
+}   
+onClickH(){
+  this.btSelectM="outline";
+  this.btSelectS="outline";
+  this.btSelectH="solid";  
+ 
+}
 
   mensajes:Mensaje[]=[
 

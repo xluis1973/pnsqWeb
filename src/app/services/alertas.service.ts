@@ -12,8 +12,6 @@ export class AlertasService {
   async presentAlert(message:string) {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
-      header: 'Alert',
-      subHeader: 'Subtitle',
       message,
       buttons: ['OK']
     });
