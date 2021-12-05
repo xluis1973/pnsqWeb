@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 
 import { NavController } from '@ionic/angular';
 import { Publicacion } from 'src/app/interfaces/interfaces';
+import { PublicarService } from 'src/app/services/publicar.service';
 
 @Component({
   selector: 'app-publicar',
@@ -22,7 +23,7 @@ export class PublicarPage implements OnInit {
 
  };
 
-  constructor() {
+  constructor(private pblService:PublicarService) {
 
   }
   public btSelectM:String="outline";
@@ -54,6 +55,8 @@ onClickH(){
 
   loadImageFromDevice(event){
 
+    console.log(event.target.files[0]);
+    this.pblService.guardarImage(event.target.files[0]);
   }
    crearPublicacion(formulario:NgForm){
 
