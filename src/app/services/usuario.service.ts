@@ -1,10 +1,12 @@
 import { PropertyRead } from '@angular/compiler';
 import { Injectable } from '@angular/core';
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword  } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut  } from "firebase/auth";
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from 'src/environments/environment.prod';
 import { getFirestore, collection, getDocs, setDoc,doc } from 'firebase/firestore/lite';
 import { Guia, Usuario } from '../interfaces/interfaces';
+import {Storage} from '@ionic/storage-angular';
+
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
@@ -16,7 +18,18 @@ export class UsuarioService {
 
   usuario:Usuario;
   guia:Guia;
-  constructor() { }
+  private _storage: Storage | null = null;
+  constructor(private storage:Storage) { 
+    this.init();
+  }
+
+
+
+  async init() {
+    // If using, define drivers here: await this.storage.defineDriver(/*...*/);
+    const storage = await this.storage.create();
+    this._storage = storage;
+  }
 
  async login(email:string,password:string):Promise<boolean>{
 
@@ -27,6 +40,8 @@ export class UsuarioService {
           .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
+            //Guardo el Token del usuario logueado
+            this.guardarToken(userCredential.user.uid);
             resolve(true);
             // ...
           })
@@ -84,11 +99,31 @@ async  guardarDatos() {
   });
 
 
+  
   /*const usuarioCol = collection(db, 'usuario');
 
-  
+ 
   const usuarioSnapshot = await getDocs(usuarioCol);
   const usuarioList = usuarioSnapshot.docs.map(doc => doc.data());
   return usuarioList;*/
+
 }
+async guardarToken(token:string){
+
+  await this._storage?.set('token', token);
+
+}
+async obtenerToken():Promise<string>{
+  const token:string=await this.storage.get('token') ||null ;
+  return new Promise(resolve=>{
+    resolve(token);
+  });
+
+}
+cerrarSesion(){
+
+  signOut(auth);
+  this._storage.clear();
+}
+
 }

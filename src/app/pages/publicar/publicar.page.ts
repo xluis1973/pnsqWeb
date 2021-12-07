@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 import { NavController } from '@ionic/angular';
 import { Publicacion } from 'src/app/interfaces/interfaces';
 import { PublicarService } from 'src/app/services/publicar.service';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-publicar',
@@ -23,7 +24,7 @@ export class PublicarPage implements OnInit {
 
  };
 
-  constructor(private pblService:PublicarService) {
+  constructor(private pblService:PublicarService, private usuarioService:UsuarioService) {
 
   }
   public btSelectM:String="outline";
@@ -58,15 +59,27 @@ onClickH(){
     console.log(event.target.files[0]);
     this.pblService.guardarImage(event.target.files[0]);
   }
-   crearPublicacion(formulario:NgForm){
+   async crearPublicacion(formulario:NgForm){
+     this.publicacion.creador = await this.usuarioService.obtenerToken();
 
-    this.publicacion.creador="";
-    this.publicacion.identificador="";
-    this.publicacion.cuerpo="";
-    this.publicacion.fechaCreacion=null;
-    this.publicacion.fechaVto=new Date();
-    this.publicacion.titulo="";
+   
+    this.publicacion.fechaCreacion=new Date();
+    await this.pblService.enviarPublicacion(this.publicacion);
+  
+  
  
     
+  }
+  limpiarCampos(){
+    this.publicacion={
+      identificador:"",
+      titulo:"",
+      cuerpo:"",
+      urlImagen:"",
+      fechaCreacion:null, 
+      fechaVto: null,
+      creador:""
+    
+     };
   }
 }

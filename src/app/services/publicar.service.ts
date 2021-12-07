@@ -18,6 +18,16 @@ const almacen = getStorage(app);
 })
 export class PublicarService {
   
+  private publica:Publicacion={
+    identificador:"",
+  titulo:"",
+  cuerpo:"",
+  urlImagen:"",
+  fechaCreacion:null, 
+  fechaVto: null,
+  creador:""
+
+  };
 
 
   constructor() { }
@@ -25,12 +35,20 @@ export class PublicarService {
 
   async  enviarPublicacion(publicacion:Publicacion) {
 
+    this.publica.creador=publicacion.creador;
+    this.publica.titulo=publicacion.titulo;
+    this.publica.cuerpo=publicacion.cuerpo;
+    this.publica.fechaCreacion=publicacion.fechaCreacion;
+    this.publica.fechaVto=publicacion.fechaVto;
+    
+
     console.log('Guardando');
   
+    
     // De esta forma guarda un documento cuyo id es random
     const col=collection(db,"publicacion");
     
-    await addDoc(col,publicacion).catch((error)=>{
+    await addDoc(col,this.publica).catch((error)=>{
   
       console.log('Error al guardar Usuario ',error.message);
   
@@ -55,13 +73,15 @@ export class PublicarService {
             console.log("Estado "+snapshot.state);
           }
         }
-      }, function(error) {
+      }, (error) =>{
         // Handle unsuccessful uploads
-      }, function() {
+      }, () =>{
         // Handle successful uploads on complete
         // For instance, get the download URL: https://firebasestorage.googleapis.com/...
        getDownloadURL(refe).then(res=>{
          console.log("URL "+res);
+         this.publica.urlImagen=res;
+         
        });
       });    
       await task;
