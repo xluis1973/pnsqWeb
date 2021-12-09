@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
-import { initializeApp } from 'firebase/app';
+import { initializeApp} from 'firebase/app';
 import { firebaseConfig } from 'src/environments/environment.prod';
 import { getFirestore, getDocs, collection,setDoc,doc, query, where, getDoc, addDoc } from 'firebase/firestore/lite';
 import { Publicacion } from '../interfaces/interfaces';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from '@firebase/storage';
+
+//import {getMessaging,onMessage} from 'firebase/messaging' 
+import {getMessaging} from 'firebase/messaging/sw';
 
 
 
@@ -87,4 +90,31 @@ export class PublicarService {
       await task;
      
 }
+
+notificacionesPush(){
+
+ const topic = 'highScores';
+
+const message = {
+  data: {
+    score: '850',
+    time: '2:45'
+  },
+  topic: topic
+};
+
+// Send a message to devices subscribed to the provided topic.
+
+getMessaging().send(message)
+  .then((response) => {
+    // Response is a message ID string.
+    console.log('Successfully sent message:', response);
+  })
+  .catch((error) => {
+    console.log('Error sending message:', error);
+  });
+ 
 }
+}
+
+
