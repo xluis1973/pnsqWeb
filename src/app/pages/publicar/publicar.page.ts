@@ -66,9 +66,9 @@ onClickH(){
     this.publicacion.fechaCreacion=new Date();
     await this.pblService.enviarPublicacion(this.publicacion);
     this.limpiarCampos();
+    this.pblService.notificacionesPush();
   
-  
- 
+   
     
   }
   limpiarCampos(){

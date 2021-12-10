@@ -4,9 +4,9 @@ import { firebaseConfig } from 'src/environments/environment.prod';
 import { getFirestore, getDocs, collection,setDoc,doc, query, where, getDoc, addDoc } from 'firebase/firestore/lite';
 import { Publicacion } from '../interfaces/interfaces';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from '@firebase/storage';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-//import {getMessaging,onMessage} from 'firebase/messaging' 
-import {getMessaging} from 'firebase/messaging/sw';
+
 
 
 
@@ -33,7 +33,7 @@ export class PublicarService {
   };
 
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
 
   async  enviarPublicacion(publicacion:Publicacion) {
@@ -93,27 +93,34 @@ export class PublicarService {
 
 notificacionesPush(){
 
- const topic = 'highScores';
-
-const message = {
-  data: {
-    score: '850',
-    time: '2:45'
+const data ={
+  notification:{
+    title:'Notification title Todos topic',
+    body: 'Notification body Todos topic',
+    sound: 'default',
+    click_action: 'FCM_PLUGIN_ACTIVITY', 
+    icon: 'fcm_push_icon'
   },
-  topic: topic
-};
+  to: '/topics/topicExample',
+  priority: 'high'
+}
 
 // Send a message to devices subscribed to the provided topic.
 
-getMessaging().send(message)
-  .then((response) => {
-    // Response is a message ID string.
-    console.log('Successfully sent message:', response);
-  })
-  .catch((error) => {
-    console.log('Error sending message:', error);
-  });
- 
+const headers= new HttpHeaders({
+  'Content-Type': 'application/json',
+  'Authorization':'key=AAAAaLWopaA:APA91bHC-ubI9ojxhcL-t-sudGv9EmX9bz7-RyGQ0J47_pVtjQO4ATRrNpoO3UYUwqOMbPjc5ZDupMfH5gqIFK_BBL6nMD48q_nqUvjwonRAyre0gy9i_b2jk9eakDF4_Uc2_4Wz23vd'
+
+});
+
+//const headers = new HttpHeaders().set('Content-Type', 'application/json');
+//headers.set('Authorization','Bearer AAAAaLWopaA:APA91bHC-ubI9ojxhcL-t-sudGv9EmX9bz7-RyGQ0J47_pVtjQO4ATRrNpoO3UYUwqOMbPjc5ZDupMfH5gqIFK_BBL6nMD48q_nqUvjwonRAyre0gy9i_b2jk9eakDF4_Uc2_4Wz23vd');
+
+this.http.post("https://fcm.googleapis.com/fcm/send",data,{headers:headers,responseType:"text"})
+.subscribe(resp=>{
+          console.log("Respuesta de envio ",resp);
+});
+
 }
 }
 
