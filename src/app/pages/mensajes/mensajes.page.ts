@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Mensaje } from 'src/app/interfaces/interfaces';
 
+
 @Component({
   selector: 'app-mensajes',
   templateUrl: './mensajes.page.html',
@@ -44,6 +45,7 @@ onClickH(){
 
   ];
   ngOnInit() {
+
   }
 
   ngAfterViewInit(): void {

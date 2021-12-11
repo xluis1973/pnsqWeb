@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ComponentsModule } from './components/components/components.module';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import {MensajesService} from "./services/mensajes.service";
 
 //Storage local
 import { IonicStorageModule } from '@ionic/storage-angular';
@@ -21,7 +22,7 @@ import { IonicStorageModule } from '@ionic/storage-angular';
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,ComponentsModule,IonicStorageModule.forRoot(),HttpClientModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },MensajesService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
