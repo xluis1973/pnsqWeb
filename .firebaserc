@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "pnsq-1cd2f"
+  },
+  "targets": {
+    "pnsq-1cd2f": {
+      "hosting": {
+        "app": [
+          "pnsq-1cd2f"
+        ]
+      }
+    }
   }
 }

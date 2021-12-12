@@ -5,7 +5,7 @@ import {   getMessaging, getToken, Messaging, onMessage } from "firebase/messagi
 import { Observable } from 'rxjs';
 
 import { firebaseConfig } from 'src/environments/environment.prod';
-import { onBackgroundMessage } from 'firebase/messaging/sw';
+
 
 const app = initializeApp(firebaseConfig);
 
@@ -22,8 +22,11 @@ export class MensajesService {
 
 private observaMensaje= new Observable(observe=>{
 
+  console.log("En observable");
   onMessage(this.messaging,payload=>{
-
+    
+      console.log("Por devolver.");
+      
     observe.next(payload);
   });
 
