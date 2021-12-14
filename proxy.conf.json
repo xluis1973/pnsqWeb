@@ -1,0 +1,10 @@
+{
+
+    "/fcm/*":{
+        "target":"https://fcm.googleapis.com",
+        "secure": false,
+        "changeOrigin" : true
+
+    }
+
+}

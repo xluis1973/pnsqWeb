@@ -111,6 +111,7 @@ async  guardarDatos() {
 async guardarToken(token:string){
 
   await this._storage?.set('token', token);
+  console.log('Token de logueo',token);
 
 }
 async obtenerToken():Promise<string>{
