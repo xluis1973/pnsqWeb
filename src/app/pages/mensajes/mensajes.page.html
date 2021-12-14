@@ -35,7 +35,7 @@
               
               <ion-card-header>
                 <ion-card-subtitle>Remitente: {{mensaje.remitente}}</ion-card-subtitle>
-                <ion-card-title>Hora: {{mensaje.fechaEnvio.getHours()}}:{{mensaje.fechaEnvio.getMinutes()}}</ion-card-title>
+                <ion-card-title>Hora: {{mensaje.fechaEnvio.toDate().getHours()}}:{{mensaje.fechaEnvio.toDate().getMinutes()}}</ion-card-title>
               </ion-card-header>
               <ion-card-content>
                 <img [src]="mensaje.mensaje" />

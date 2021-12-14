@@ -1,3 +1,4 @@
+import { Timestamp } from "firebase/firestore/lite";
 
 
 export interface Usuario {
@@ -60,7 +61,7 @@ export interface Mensaje{
     identificador:string,
     mensaje:string,
     remitente:string,
-    fechaEnvio:Date,
+    fechaEnvio:Timestamp,
     ultimaUbicacion:string
 }
 

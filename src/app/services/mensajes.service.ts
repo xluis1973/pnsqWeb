@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { initializeApp} from 'firebase/app';
 
-import {   getMessaging, getToken, Messaging, onMessage } from "firebase/messaging";
-import { getFirestore, getDocs, collection,setDoc,doc, query, where, getDoc, addDoc, deleteDoc } from 'firebase/firestore/lite';
+import {   getMessaging, getToken, MessagePayload, Messaging, onMessage } from "firebase/messaging";
+import { getFirestore, getDocs, collection,setDoc,doc, query, where, getDoc, addDoc, deleteDoc, orderBy } from 'firebase/firestore/lite';
 import { Observable } from 'rxjs';
 
 import { firebaseConfig } from 'src/environments/environment.prod';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Mensaje } from '../interfaces/interfaces';
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -23,7 +24,9 @@ export class MensajesService {
   
   }
 
-private observaMensaje= new Observable(observe=>{
+
+
+private observaMensaje= new Observable<MessagePayload>(observe=>{
 
   console.log("En observable");
   onMessage(this.messaging,payload=>{
@@ -85,4 +88,26 @@ async borrarEnBDNotiKey(notiKey:string){
   await deleteDoc(grupoWebCol);
   
 }
+
+async obtenerUltimoMesaje():Promise<Mensaje>{
+  let mensaje:Mensaje=null;
+  const mensajeCol = collection(db, 'mensaje');
+
+  const q = query(mensajeCol,orderBy("fechaEnvio","desc"));
+  const mensajeSnapshot = await getDocs(q);
+  
+  const mensajeList = mensajeSnapshot.docs.map(doc => doc.data());
+  if(mensajeList){
+    mensaje=mensajeList[0] as Mensaje;
+   
+  }
+  
+  
+    console.log("mensaje ",mensaje);
+    
+  
+  
+  
+  return mensaje
+ }
 }

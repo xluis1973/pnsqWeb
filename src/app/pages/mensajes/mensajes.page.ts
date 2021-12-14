@@ -1,5 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Timestamp } from 'firebase/firestore/lite';
 import { Mensaje } from 'src/app/interfaces/interfaces';
+import { MensajesService } from 'src/app/services/mensajes.service';
 
 
 @Component({
@@ -11,7 +13,7 @@ export class MensajesPage implements OnInit, AfterViewInit {
    btSelectM:String="outline";
    btSelectS:String="outline";
    btSelectH:String="outline";
-  constructor() { }
+  constructor(private msnSrv:MensajesService) { }
  
   onClickM(){
     this.btSelectM="solid";
@@ -32,23 +34,33 @@ onClickH(){
  
 }
 
-  mensajes:Mensaje[]=[
-
-    {
-      identificador:"leida",
-    mensaje:"/assets/icon/policia.png",
-    remitente:"Antonio Videla",
-    fechaEnvio:new Date(),
-    ultimaUbicacion:""
-    },
+  mensajes:Mensaje[]=[];
+  async ngOnInit() {
+    this.msnSrv.recibeMensaje().subscribe(payload=>{
+      console.log("Mensaje ",payload);
+      this.msnSrv.obtenerUltimoMesaje().then(mensaje=>{
+        const tipo=payload.notification.body;
+        mensaje.identificador="nueva";
     
+        if(tipo==="Médico"){
+          mensaje.mensaje="/assets/icon/auxilio.png"
+        } else if(tipo==="Policía"){
+          mensaje.mensaje="/assets/icon/policia.png"
+        } else if(tipo==="Incendio"){
+          mensaje.mensaje="/assets/icon/fuego.png"
+        }
 
-  ];
-  ngOnInit() {
+        this.mensajes.push(mensaje);
+
+      });
+      
+      
+  });
 
   }
 
   ngAfterViewInit(): void {
+    /*
     setTimeout(() => {
      
       this.mensajes.push({
@@ -60,7 +72,7 @@ onClickH(){
       });
       
 }, 3000);
-
+*/
   }
 
 }
