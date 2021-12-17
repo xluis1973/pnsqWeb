@@ -1,5 +1,6 @@
 
 import {  Component, OnInit } from '@angular/core';
+import { MonitorService } from 'src/app/services/monitor.service';
 
 import { Marker } from '../../interfaces/interfaces';
 
@@ -55,10 +56,16 @@ markers: Marker[]=[
 public btSelectM:String="outline";
 public btSelectS:String="outline";
 public btSelectH:String="outline";
-  constructor() { }
+  constructor(private monitorSrv:MonitorService) { }
   
   ngOnInit() { 
     this.loadMap();
+    this.monitorSrv.obtenerUbicaciones().then(resp=>{
+
+      console.log("En Monitoreo page ",resp);
+      
+
+    });
   }
 
   onClickM(){
