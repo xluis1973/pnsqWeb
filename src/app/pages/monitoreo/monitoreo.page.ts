@@ -7,7 +7,7 @@ import { Marker } from '../../interfaces/interfaces';
 
 
 
-declare var google;
+declare var google:any;
 
 
 @Component({
@@ -18,39 +18,9 @@ declare var google;
 
 export class MonitoreoPage implements OnInit {
 map=null;
-markers: Marker[]=[
 
-  {
-    position: {
-      lat: -33.1742696,
-      lng: -66.2954034
-    },
-    title: 'visitante 1'
-  },
 
-  {
-    position: {
-      lat: -33.1740215,
-      lng: -66.2975196
-    },
-    title: 'visitante 2'
-  },
-  {
-    position: {
-      lat: -33.1742500,
-      lng: -66.2954034
-    },
-    title: 'visitante 3'
-  },
-  {
-    position: {
-      lat: -33.1742400,
-      lng: -66.2954034
-    },
-    title: 'visitante 4'
-  }
-
-];
+markers: any[]=[];
 
 
 public btSelectM:String="outline";
@@ -60,10 +30,34 @@ public btSelectH:String="outline";
   
   ngOnInit() { 
     this.loadMap();
-    this.monitorSrv.obtenerUbicaciones().then(resp=>{
+    this.monitorSrv.leerUbicaciones().subscribe(resp=>{
 
-      console.log("En Monitoreo page ",resp);
-      
+      this.limpiaMarcadores();
+
+      resp.forEach(ubicacion=>{
+       
+        let marcador=new google.maps.Marker({
+          position: new google.maps.LatLng(ubicacion.latitud,ubicacion.longitud),
+          draggable: false,
+          title: ubicacion.usuario,
+                 map: this.map,
+                
+                       
+          
+        });
+        marcador.addListener('click',function(){
+          const infoWindow = new google.maps.InfoWindow();
+          infoWindow.close();
+          infoWindow.setContent(marcador.getTitle());
+          infoWindow.open(marcador.getMap(), marcador);
+        });
+        
+        this.markers.push(marcador);
+        
+        
+       
+
+      });
 
     });
   }
@@ -117,27 +111,40 @@ public btSelectH:String="outline";
       
       mapEle.classList.add('show-map');
       this.renderMarkets();
+      console.log("Hizo clic");
+      
     });
        
   }
 
   renderMarkets(){
-    this.markers.forEach(marker=>{
+    /*this.markers.forEach(marker=>{
     
       this.addMarker(marker);
       
-    });
+    });*/
   }
 //agregar marcador
   addMarker(marker:Marker){
-    return new google.maps.Marker({
+    let marcador= new google.maps.Marker({
       position: marker.position,
       map: this.map,
       title: marker.title
     });
+    marcador.addListener('click',function(){
+     
+      console.log("Hizo clic");
+      
+    });
+    marcador.snippet("Population: 4,137,400");
   
   }
-  
+  limpiaMarcadores() {
+    this.markers.forEach((marca)=>{
+      marca.setMap(null);
+       marca=null;});
+    this.markers=[];
+  }
  
   }
 

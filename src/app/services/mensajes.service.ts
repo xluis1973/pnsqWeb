@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { initializeApp} from 'firebase/app';
 
 import {   getMessaging, getToken, MessagePayload, Messaging, onMessage } from "firebase/messaging";
-import { getFirestore, getDocs, collection,setDoc,doc, query, where, getDoc, addDoc, deleteDoc, orderBy } from 'firebase/firestore/lite';
+import { getFirestore, getDocs, collection,setDoc,doc, query, where, getDoc, addDoc, deleteDoc, orderBy } from 'firebase/firestore';
 import { Observable } from 'rxjs';
 
 import { firebaseConfig } from 'src/environments/environment.prod';
