@@ -33,10 +33,10 @@ public btSelectH:String="outline";
     this.monitorSrv.leerUbicaciones().subscribe(resp=>{
 
       this.limpiaMarcadores();
-
+      let marcador;
       resp.forEach(ubicacion=>{
        
-        let marcador=new google.maps.Marker({
+        marcador=new google.maps.Marker({
           position: new google.maps.LatLng(ubicacion.latitud,ubicacion.longitud),
           draggable: false,
           title: ubicacion.usuario,
@@ -59,6 +59,11 @@ public btSelectH:String="outline";
 
       });
 
+
+      if(marcador){
+        this.map.setCenter(marcador.getPosition());
+        this.map.setZoom(15);
+      }
     });
   }
 
@@ -102,43 +107,23 @@ public btSelectH:String="outline";
 
     ctaLayer.setMap(this.map);
     setTimeout(() => {
-      this.map.setCenter(new google.maps.LatLng(-32.48540517655754, -66.96221829130207));
-      this.map.setZoom(12);
+     // this.map.setCenter(new google.maps.LatLng(-32.48540517655754, -66.96221829130207));
+     // this.map.setZoom(12);
       
 }, 3000);
    
     google.maps.event.addListenerOnce(this.map,'idle',()=>{
       
       mapEle.classList.add('show-map');
-      this.renderMarkets();
+     
       console.log("Hizo clic");
       
     });
        
   }
 
-  renderMarkets(){
-    /*this.markers.forEach(marker=>{
-    
-      this.addMarker(marker);
-      
-    });*/
-  }
-//agregar marcador
-  addMarker(marker:Marker){
-    let marcador= new google.maps.Marker({
-      position: marker.position,
-      map: this.map,
-      title: marker.title
-    });
-    marcador.addListener('click',function(){
-     
-      console.log("Hizo clic");
-      
-    });
-    marcador.snippet("Population: 4,137,400");
   
-  }
+
   limpiaMarcadores() {
     this.markers.forEach((marca)=>{
       marca.setMap(null);
