@@ -70,7 +70,8 @@ return new Promise(resolve=>{
          const user = userCredential.user;
          this.usuario.identificador=user.uid;
          this.guia.usuario=user.uid;
-         
+         this.guia.identificador=user.uid;
+         console.log(guia.password);
          resolve(true);
 
          // ...
@@ -98,7 +99,12 @@ async  guardarDatos() {
 
   });
 
+  const guiaCol=doc(db, "guia", this.guia.identificador );
+  await setDoc(guiaCol, this.guia).catch((error)=>{
 
+    console.log('Error al guardar ',error.message);
+
+  });
   
   /*const usuarioCol = collection(db, 'usuario');
 
