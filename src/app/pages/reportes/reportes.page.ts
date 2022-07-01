@@ -3,6 +3,7 @@ import { Component, OnInit ,AfterViewInit, ElementRef, ViewChild} from '@angular
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 
 import { Label } from 'ng2-charts';
+import { ReporteService } from '../../services/reporte.service';
 
 
 
@@ -15,14 +16,18 @@ import { Label } from 'ng2-charts';
   styleUrls: ['./reportes.page.scss'],
   
 })
-export class ReportesPage implements OnInit {
+export class ReportesPage {
 
   
   public btSelectM:String="solid";
   public btSelectS:String="outline";
   public btSelectH:String="outline";
-  constructor() { }
- 
+  constructor(private reporteSrv:ReporteService) { this.cargaDatos();}
+
+  ionViewWillEnter() {
+    this.cargaDatos();
+ }
+
   onClickM(){
     this.btSelectM="solid";
     this.btSelectS="outline";
@@ -41,7 +46,10 @@ onClickH(){
   this.btSelectH="solid";  
  
 }
-  //Gráfico de Barras
+
+private senderosVisitados:number[]=[0,0,0,0,0];
+
+//Gráfico de Barras
   //Aquí leería de un servicio
   public barChartLabels = ['Abril', 'Mayo', 'Junio', 'Agosto', 'Septiembre', 'Octubre'];
   public barChartType = 'bar' as ChartType;
@@ -63,15 +71,25 @@ onClickH(){
   
   public tartaChartPlugins =null;
 
+  valores:number[];
+  
   public tartaChartData = [
-    { data: [45,25 , 15, 5, 10], label: 'Senderos' },
+    { data: this.senderosVisitados, label: 'Senderos' },
    
   ];
 
   tartaChartOptions = { legend: { display: true, labels: { fontColor: 'black' } }};
  
 
-  ngOnInit(): void {
+  
+  async cargaDatos(){
+
+    this.senderosVisitados= await this.reporteSrv.senderosVisitados(true);
+    this.tartaChartData = [
+      { data: this.senderosVisitados, label: 'Senderos' },
+     
+    ];
+    
   }
 
   // events
