@@ -22,6 +22,9 @@ export class ReportesPage {
   public btSelectM:String="solid";
   public btSelectS:String="outline";
   public btSelectH:String="outline";
+  private año:boolean=false;
+  private mes:boolean=false;
+  private hoy:boolean=false;
   constructor(private reporteSrv:ReporteService) { this.cargaDatos();}
 
   ionViewWillEnter() {
@@ -32,19 +35,31 @@ export class ReportesPage {
     this.btSelectM="solid";
     this.btSelectS="outline";
     this.btSelectH="outline";
+    this.año=true;
+    this.mes=false;
+    this.hoy=false;
+    this.cargaDatos();
+    
+
       
     }
 onClickS(){
   this.btSelectM="outline";
   this.btSelectS="solid";
   this.btSelectH="outline";  
- 
+  this.año=false;
+  this.mes=true;
+  this.hoy=false;
+  this.cargaDatos();
 }   
 onClickH(){
   this.btSelectM="outline";
   this.btSelectS="outline";
   this.btSelectH="solid";  
- 
+  this.año=false;
+  this.mes=false;
+  this.hoy=true;
+  this.cargaDatos();
 }
 
 private senderosVisitados:number[]=[0,0,0,0,0];
@@ -84,7 +99,7 @@ private senderosVisitados:number[]=[0,0,0,0,0];
   
   async cargaDatos(){
 
-    this.senderosVisitados= await this.reporteSrv.senderosVisitados(true);
+    this.senderosVisitados= await this.reporteSrv.senderosVisitados(this.año,this.mes,this.hoy);
     this.tartaChartData = [
       { data: this.senderosVisitados, label: 'Senderos' },
      

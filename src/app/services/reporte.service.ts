@@ -5,6 +5,7 @@ import { firebaseConfig } from 'src/environments/environment.prod';
 import { getFirestore, collection, getDocs, setDoc,orderBy,query,where } from 'firebase/firestore/lite';
 import { Grupo } from '../interfaces/interfaces';
 import { group } from 'console';
+import { groupBy } from 'rxjs/internal/operators/groupBy';
 
 
 const app = initializeApp(firebaseConfig);
@@ -17,8 +18,9 @@ export class ReporteService {
 
   constructor() { }
   
-  async senderosVisitados(porMes?:boolean){
+  async senderosVisitados(año:boolean,mes:boolean,hoy:boolean){
 
+    this.informeVisitantes();
     let flora:number=0;
     let mirador:number=0;
     let guanacos:number=0;
@@ -38,7 +40,7 @@ export class ReporteService {
   const grupoSnapshot = await getDocs(q);
   
   const grupoList = grupoSnapshot.docs.map(doc => doc.data());
-  if(porMes){
+  if(mes){
 
     grupoList.forEach((grupo)=>{
 
@@ -57,9 +59,26 @@ export class ReporteService {
         case "farallones":farallones++;break;
   
       }
+    }
+  });
+    }else if(año){
+      grupoList.forEach((grupo)=>{
+
   
-    }else {
-      console.log("No ",grupo.fechaCreacion.getUTCMonth());
+        grupo.fechaCreacion=grupo.fechaCreacion.toDate();
+        
+        if(grupo.fechaCreacion.getFullYear()== new Date().getFullYear() ){
+         
+          
+         switch(grupo.recorrido){
+    
+          case "flora":flora++; break;
+          case "mirador":mirador++;break;
+          case "guanacos":guanacos++;break;
+          case "huellas":huellas++;break;
+          case "farallones":farallones++;break;
+    
+        }
     }
   
   
@@ -67,6 +86,28 @@ export class ReporteService {
   
 
 
+  } else {
+
+    grupoList.forEach((grupo)=>{
+
+  
+      grupo.fechaCreacion=grupo.fechaCreacion.toDate();
+      
+      if(grupo.fechaCreacion.getUTCMonth() == new Date().getUTCMonth() && grupo.fechaCreacion.getFullYear()== new Date().getFullYear() && new Date().getDate()==grupo.fechaCreacion.getDate()){
+       
+        
+       switch(grupo.recorrido){
+  
+        case "flora":flora++; break;
+        case "mirador":mirador++;break;
+        case "guanacos":guanacos++;break;
+        case "huellas":huellas++;break;
+        case "farallones":farallones++;break;
+  
+      }
+
+  }
+});
   }
  
   let total:number=flora+mirador+guanacos+huellas+farallones;
@@ -90,6 +131,22 @@ export class ReporteService {
  
 
   
+
+  }
+
+  async informeVisitantes(){
+
+    const grupoCol = collection(db, 'grupo');
+
+    const q = query(grupoCol,orderBy("recorrido","asc"));
+    const grupoSnapshot = await getDocs(q);
+    
+    const grupoList = grupoSnapshot.docs.map(doc => doc.data());
+    grupoList.forEach((grupo)=>{
+
+      console.log("Prueba fecha ",grupo.fechaCreacion.toDate());
+
+    });
 
   }
 }
