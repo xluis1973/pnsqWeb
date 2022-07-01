@@ -47,7 +47,7 @@ export class ReporteService {
   
       grupo.fechaCreacion=grupo.fechaCreacion.toDate();
       
-      if(grupo.fechaCreacion.getUTCMonth() == new Date().getUTCMonth() && grupo.fechaCreacion.getFullYear()== new Date().getFullYear() ){
+      if((grupo.fechaCreacion.getUTCMonth()) == (new Date().getUTCMonth())+1 && grupo.fechaCreacion.getFullYear()== new Date().getFullYear() ){
        
         
        switch(grupo.recorrido){
@@ -93,7 +93,7 @@ export class ReporteService {
   
       grupo.fechaCreacion=grupo.fechaCreacion.toDate();
       
-      if(grupo.fechaCreacion.getUTCMonth() == new Date().getUTCMonth() && grupo.fechaCreacion.getFullYear()== new Date().getFullYear() && new Date().getDate()==grupo.fechaCreacion.getDate()){
+      if(grupo.fechaCreacion.getUTCMonth() == new Date().getUTCMonth()+1 && grupo.fechaCreacion.getFullYear()== new Date().getFullYear() && new Date().getDate()==grupo.fechaCreacion.getDate()){
        
         
        switch(grupo.recorrido){
