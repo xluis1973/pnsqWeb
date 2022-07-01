@@ -43,9 +43,12 @@ export class ReporteService {
     grupoList.forEach((grupo)=>{
 
   
-      console.log(grupo.fechaCreacion.getMonth());
-      if(grupo.fechaCreacion.getMonth()=== new Date().getMonth()){
-      switch(grupo.recorrido){
+      grupo.fechaCreacion=grupo.fechaCreacion.toDate();
+      
+      if(grupo.fechaCreacion.getUTCMonth() == new Date().getUTCMonth() && grupo.fechaCreacion.getFullYear()== new Date().getFullYear() ){
+       
+        
+       switch(grupo.recorrido){
   
         case "flora":flora++; break;
         case "mirador":mirador++;break;
@@ -55,6 +58,8 @@ export class ReporteService {
   
       }
   
+    }else {
+      console.log("No ",grupo.fechaCreacion.getUTCMonth());
     }
   
   
