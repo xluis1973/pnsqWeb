@@ -47,7 +47,7 @@ export class ReporteService {
   
       grupo.fechaCreacion=grupo.fechaCreacion.toDate();
       
-      if((grupo.fechaCreacion.getUTCMonth()) == (new Date().getUTCMonth())+1 && grupo.fechaCreacion.getFullYear()== new Date().getFullYear() ){
+      if(grupo.fechaCreacion.getMonth()+1== new Date().getMonth()+1 && grupo.fechaCreacion.getFullYear()== new Date().getFullYear() ){
        
         
        switch(grupo.recorrido){
@@ -88,12 +88,13 @@ export class ReporteService {
 
   } else {
 
+    console.log("Hoy");
     grupoList.forEach((grupo)=>{
 
   
       grupo.fechaCreacion=grupo.fechaCreacion.toDate();
       
-      if(grupo.fechaCreacion.getUTCMonth() == new Date().getUTCMonth()+1 && grupo.fechaCreacion.getFullYear()== new Date().getFullYear() && new Date().getDate()==grupo.fechaCreacion.getDate()){
+      if(grupo.fechaCreacion.getUTCMonth() == new Date().getUTCMonth() && grupo.fechaCreacion.getFullYear()== new Date().getFullYear() && new Date().getDate()==grupo.fechaCreacion.getDate()){
        
         
        switch(grupo.recorrido){
@@ -144,7 +145,7 @@ export class ReporteService {
     const grupoList = grupoSnapshot.docs.map(doc => doc.data());
     grupoList.forEach((grupo)=>{
 
-      console.log("Prueba fecha ",grupo.fechaCreacion.toDate());
+      console.log("Prueba fecha ",grupo.fechaCreacion.toDate().getMonth()+1);
 
     });
 
