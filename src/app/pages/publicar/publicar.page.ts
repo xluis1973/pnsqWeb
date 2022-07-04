@@ -27,27 +27,39 @@ export class PublicarPage implements OnInit {
   constructor(private pblService:PublicarService, private usuarioService:UsuarioService) {
 
   }
-  public btSelectM:String="outline";
+  public btSelectM:String="solid";
   public btSelectS:String="outline";
   public btSelectH:String="outline";
+  public btSelectB:String="outline";
+  public fechaBuscar:any;
  
  
   onClickM(){
     this.btSelectM="solid";
     this.btSelectS="outline";
     this.btSelectH="outline";
+    this.btSelectB="outline";
       
     }
 onClickS(){
   this.btSelectM="outline";
   this.btSelectS="solid";
-  this.btSelectH="outline";  
+  this.btSelectH="outline";
+  this.btSelectB="outline";  
  
 }   
 onClickH(){
   this.btSelectM="outline";
   this.btSelectS="outline";
-  this.btSelectH="solid";  
+  this.btSelectH="solid";
+  this.btSelectB="outline";  
+ 
+}
+onClickB(){
+  this.btSelectM="outline";
+  this.btSelectS="outline";
+  this.btSelectH="outline";
+  this.btSelectB="solid";  
  
 }
   
@@ -82,5 +94,10 @@ onClickH(){
       creador:""
     
      };
+  }
+
+  public buscarPorFecha(){
+    console.log(this.fechaBuscar);
+    console.log(new Date(this.fechaBuscar));
   }
 }

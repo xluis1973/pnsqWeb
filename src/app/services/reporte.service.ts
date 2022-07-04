@@ -3,9 +3,8 @@ import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, si
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from 'src/environments/environment.prod';
 import { getFirestore, collection, getDocs, setDoc,orderBy,query,where } from 'firebase/firestore/lite';
-import { Grupo } from '../interfaces/interfaces';
-import { group } from 'console';
-import { groupBy } from 'rxjs/internal/operators/groupBy';
+import { Grupo, Visitante } from '../interfaces/interfaces';
+
 
 
 const app = initializeApp(firebaseConfig);
@@ -137,17 +136,44 @@ export class ReporteService {
 
   async informeVisitantes(){
 
-    const grupoCol = collection(db, 'grupo');
-
-    const q = query(grupoCol,orderBy("recorrido","asc"));
-    const grupoSnapshot = await getDocs(q);
     
-    const grupoList = grupoSnapshot.docs.map(doc => doc.data());
-    grupoList.forEach((grupo)=>{
+    const vistantesEnGrupo:string[]=[];
+   
+   
+    const visitantesCol = collection(db, 'visitante');
+    const q = query(visitantesCol);
+    const visitanteSnapshot = await getDocs(q);
+    
+    const allVisitanteList = visitanteSnapshot.docs.map(doc => doc.data());
 
-      console.log("Prueba fecha ",grupo.fechaCreacion.toDate().getMonth()+1);
+    const gruposCol = collection(db, 'grupo');
+    const q2 = query(gruposCol);
+    const gruposSnapshot = await getDocs(q2);
+    const visitantesEnGruposList = gruposSnapshot.docs.map(doc => doc.data());
 
+    visitantesEnGruposList.forEach(grupo=>{
+
+          grupo.visitantes.forEach(element => {
+            
+            vistantesEnGrupo.push(element);
+          });
     });
 
+    let todos=allVisitanteList.length;
+    let conGuia=0;
+    allVisitanteList.forEach(visitante=>{
+
+      
+        if(vistantesEnGrupo.find(id=>id ===visitante.identificador)){
+          conGuia++;
+        }
+
+    });
+    console.log("todos ",allVisitanteList );
+    console.log(" con guia ",vistantesEnGrupo);
+    console.log("Con guia ",conGuia);
+    console.log("Sin guia ",todos-conGuia);
+
+    return [conGuia,todos-conGuia];
   }
 }

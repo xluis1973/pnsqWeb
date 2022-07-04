@@ -22,9 +22,10 @@ export class ReportesPage {
   public btSelectM:String="solid";
   public btSelectS:String="outline";
   public btSelectH:String="outline";
-  private año:boolean=false;
+  private año:boolean=true;
   private mes:boolean=false;
   private hoy:boolean=false;
+  public tituloVisitantes:string="Visitantes "+new Date().getFullYear();
   constructor(private reporteSrv:ReporteService) { this.cargaDatos();}
 
   ionViewWillEnter() {
@@ -63,17 +64,18 @@ onClickH(){
 }
 
 private senderosVisitados:number[]=[0,0,0,0,0];
+private visitantes:number[]=[0,0];
 
 //Gráfico de Barras
   //Aquí leería de un servicio
-  public barChartLabels = ['Abril', 'Mayo', 'Junio', 'Agosto', 'Septiembre', 'Octubre'];
+  public barChartLabels = ['Visitantes'];
   public barChartType = 'bar' as ChartType;
   
   public barChartPlugins =null;
 
   public barChartData = [
-    { data: [65, 59, 80, 81, 56, 55], label: 'Visitantes sin Guía' },
-    { data: [28, 48, 40, 19, 86, 27], label: 'Visitantes con Guía' }
+    { data: [65], label: 'Visitantes sin Guía' },
+    { data: [28], label: 'Visitantes con Guía' }
   ];
 
   barChartOptions = { legend: { display: true, labels: { fontColor: 'black' } }};
@@ -103,6 +105,12 @@ private senderosVisitados:number[]=[0,0,0,0,0];
     this.tartaChartData = [
       { data: this.senderosVisitados, label: 'Senderos' },
      
+    ];
+
+    this.visitantes = await this.reporteSrv.informeVisitantes();
+    this.barChartData = [
+      { data: [this.visitantes[1]], label: 'Visitantes sin Guía' },
+      { data: [this.visitantes[0]], label: 'Visitantes con Guía' }
     ];
     
   }
