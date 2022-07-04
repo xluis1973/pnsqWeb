@@ -32,6 +32,7 @@ export class PublicarPage implements OnInit {
   public btSelectH:String="outline";
   public btSelectB:String="outline";
   public fechaBuscar:any;
+  public publicaciones:Publicacion[]=[];
  
  
   onClickM(){
@@ -64,6 +65,9 @@ onClickB(){
 }
   
   ngOnInit() {
+    const hoy:Date=new Date();
+    this.fechaBuscar=hoy.getFullYear()+"-"+(hoy.getMonth()+1)+"-"+hoy.getDate();
+
   }
 
   loadImageFromDevice(event){
@@ -99,5 +103,17 @@ onClickB(){
   public buscarPorFecha(){
     console.log(this.fechaBuscar);
     console.log(new Date(this.fechaBuscar));
+
+    this.pblService.obtenerPublicaciones(new Date(this.fechaBuscar)).then((resp)=>{
+      this.publicaciones=resp as Publicacion[];
+    });
+  }
+  public mostrar(publicacion:Publicacion){
+    
+    this.publicacion=publicacion;
+    this.btSelectM="solid";
+    this.btSelectS="outline";
+    this.btSelectH="outline";
+    this.btSelectB="outline";  
   }
 }

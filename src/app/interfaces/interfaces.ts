@@ -1,3 +1,4 @@
+import { NumberFormatStyle } from "@angular/common";
 import { Timestamp } from "firebase/firestore/lite";
 
 
@@ -56,6 +57,9 @@ export interface Publicacion{
     fechaCreacion:Date, 
     fechaVto: Date,
     creador:string
+    año?:number,
+    mes?:number,
+    dia?:number
 }
 
 export interface Mensaje{

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { initializeApp} from 'firebase/app';
 import { firebaseConfig } from 'src/environments/environment.prod';
-import { getFirestore, getDocs, collection,setDoc,doc, query, where, getDoc, addDoc } from 'firebase/firestore/lite';
+import { getFirestore, getDocs, collection,setDoc,doc, query, where, getDoc, addDoc, DocumentData } from 'firebase/firestore/lite';
 import { Publicacion } from '../interfaces/interfaces';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from '@firebase/storage';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -42,7 +42,11 @@ export class PublicarService {
     this.publica.titulo=publicacion.titulo;
     this.publica.cuerpo=publicacion.cuerpo;
     this.publica.fechaCreacion=publicacion.fechaCreacion;
-    this.publica.fechaVto=publicacion.fechaVto;
+    this.publica.fechaVto=new Date(publicacion.fechaVto);
+    this.publica.año=this.publica.fechaCreacion.getFullYear();
+    this.publica.mes=this.publica.fechaCreacion.getMonth()+1;
+    this.publica.dia=this.publica.fechaCreacion.getDate();
+
     
 
     console.log('Guardando');
@@ -56,10 +60,25 @@ export class PublicarService {
       console.log('Error al guardar Usuario ',error.message);
   
     });
+  
+}
+
+  async obtenerPublicaciones(fecha:Date){
+   
+    const col=collection(db,"publicacion");
+    
+    const q=query(col,where('mes','==',fecha.getMonth()+1),where('año','==',fecha.getFullYear()),where('dia','==',fecha.getDate()));
+    const publicacionesSnapshot = await getDocs(q);
+    const publiList:DocumentData[] = publicacionesSnapshot.docs.map(doc => doc.data());
 
   
-    
-}
+
+    console.log("Fecha ",fecha.getFullYear(),fecha.getMonth()+1,fecha.getDate());
+    console.log(publiList);
+    return publiList;
+   
+
+  }
 
  async guardarImage(file){
       const id=Math.random().toString(32).substring(2);

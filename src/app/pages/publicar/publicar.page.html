@@ -94,10 +94,14 @@
         <ion-list>
           <ion-item>
 
-            <ion-label >Fecha </ion-label>
+            <ion-label >Elegir Fecha </ion-label>
             <ion-datetime [(ngModel)]="fechaBuscar" (ionChange)="buscarPorFecha()"></ion-datetime>
 
 
+          </ion-item>
+          <ion-item *ngFor="let publi of publicaciones" (click)="mostrar(publi)">
+            <ion-label>{{publi.titulo}}</ion-label>
+          
           </ion-item>
         </ion-list>
         
