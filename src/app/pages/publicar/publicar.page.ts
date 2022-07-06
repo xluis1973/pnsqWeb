@@ -95,7 +95,8 @@ onClickB(){
       urlImagen:"",
       fechaCreacion:null, 
       fechaVto: null,
-      creador:""
+      creador:"",
+      vence:"2011/05/12"
     
      };
   }
@@ -111,8 +112,8 @@ onClickB(){
   public mostrar(publicacion:Publicacion){
     
     this.publicacion=publicacion;
-    this.btSelectM="solid";
-    this.btSelectS="outline";
+    this.btSelectM="outline";
+    this.btSelectS="solid";
     this.btSelectH="outline";
     this.btSelectB="outline";  
   }

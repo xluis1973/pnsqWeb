@@ -59,7 +59,8 @@ export interface Publicacion{
     creador:string
     año?:number,
     mes?:number,
-    dia?:number
+    dia?:number,
+    vence?:string
 }
 
 export interface Mensaje{

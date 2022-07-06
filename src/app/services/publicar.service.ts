@@ -70,12 +70,20 @@ export class PublicarService {
     const q=query(col,where('mes','==',fecha.getMonth()+1),where('año','==',fecha.getFullYear()),where('dia','==',fecha.getDate()));
     const publicacionesSnapshot = await getDocs(q);
     const publiList:DocumentData[] = publicacionesSnapshot.docs.map(doc => doc.data());
+    const listaPublicaciones:Publicacion[]=[];
+    publiList.forEach((publi)=>{
+
+      publi.fechaCreacion=publi.fechaCreacion.toDate();
+      publi.fechaVto=publi.fechaVto.toDate();
+      publi.vence=publi.dia+"/"+publi.mes+"/"+publi.año;
+      listaPublicaciones.push(publi as Publicacion);
+    });
 
   
 
     console.log("Fecha ",fecha.getFullYear(),fecha.getMonth()+1,fecha.getDate());
     console.log(publiList);
-    return publiList;
+    return listaPublicaciones;
    
 
   }
