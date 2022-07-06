@@ -40,6 +40,7 @@ export class PublicarPage implements OnInit {
     this.btSelectS="outline";
     this.btSelectH="outline";
     this.btSelectB="outline";
+    this.limpiarCampos();
       
     }
 onClickS(){
@@ -87,6 +88,20 @@ onClickB(){
    
     
   }
+
+  async eliminarPublicacion(formulario:NgForm){
+    this.publicacion.creador = await this.usuarioService.obtenerToken();
+
+  
+   this.publicacion.fechaCreacion=new Date();
+   await this.pblService.eliminarPublicacion(this.publicacion);
+   this.limpiarCampos();
+
+ 
+  
+   
+ }
+
   limpiarCampos(){
     this.publicacion={
       identificador:"",
@@ -96,9 +111,13 @@ onClickB(){
       fechaCreacion:null, 
       fechaVto: null,
       creador:"",
-      vence:"2011/05/12"
+      vence:""
     
      };
+     this.btSelectM="solid";
+    this.btSelectS="outline";
+    this.btSelectH="outline";
+    this.btSelectB="outline";
   }
 
   public buscarPorFecha(){

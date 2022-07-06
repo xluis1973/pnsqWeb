@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { initializeApp} from 'firebase/app';
 import { firebaseConfig } from 'src/environments/environment.prod';
-import { getFirestore, getDocs, collection,setDoc,doc, query, where, getDoc, addDoc, DocumentData } from 'firebase/firestore/lite';
+import { getFirestore, getDocs, collection,setDoc,doc, query, where, getDoc, deleteDoc,addDoc, DocumentData } from 'firebase/firestore/lite';
 import { Publicacion } from '../interfaces/interfaces';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from '@firebase/storage';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -36,6 +36,13 @@ export class PublicarService {
   constructor(private http:HttpClient) { }
 
 
+  async eliminarPublicacion(publicacion:Publicacion){
+
+    await deleteDoc(doc(db, "publicacion", publicacion.identificador));
+
+  }
+
+
   async  enviarPublicacion(publicacion:Publicacion) {
 
     this.publica.creador=publicacion.creador;
@@ -53,13 +60,24 @@ export class PublicarService {
   
     
     // De esta forma guarda un documento cuyo id es random
-    const col=collection(db,"publicacion");
     
-    await addDoc(col,this.publica).catch((error)=>{
+    if(publicacion.identificador.length>0){
+      const col=doc(db,"publicacion",publicacion.identificador);
+     await setDoc(col,this.publica).catch((error)=>{
   
       console.log('Error al guardar Usuario ',error.message);
   
     });
+  }else{
+    const col=collection(db,"publicacion");
+      await addDoc(col,this.publica).catch((error)=>{
+   
+       console.log('Error al guardar Usuario ',error.message);
+   
+     });
+
+
+  }
   
 }
 
@@ -69,10 +87,26 @@ export class PublicarService {
     
     const q=query(col,where('mes','==',fecha.getMonth()+1),where('año','==',fecha.getFullYear()),where('dia','==',fecha.getDate()));
     const publicacionesSnapshot = await getDocs(q);
-    const publiList:DocumentData[] = publicacionesSnapshot.docs.map(doc => doc.data());
+    const publiList:DocumentData[] = publicacionesSnapshot.docs.map((doc) => {
+      console.log("Documento ",doc.data());
+      doc.data().identificador=doc.id;
+      let publicaM:Publicacion={
+        identificador:doc.id,
+    titulo:doc.data().titulo,
+    cuerpo:doc.data().cuerpo,
+    urlImagen:doc.data().urlImagen,
+    fechaCreacion:doc.data().fechaCreacion, 
+    fechaVto: doc.data().fechaVto,
+    creador:doc.data().creador,
+    año:doc.data().año,
+    mes:doc.data().mes,
+    dia:doc.data().dia,
+    vence:doc.data().vence
+      }
+      return publicaM;});
     const listaPublicaciones:Publicacion[]=[];
     publiList.forEach((publi)=>{
-
+      console.log("Salida ID ",publi);
       publi.fechaCreacion=publi.fechaCreacion.toDate();
       publi.fechaVto=publi.fechaVto.toDate();
       publi.vence=publi.dia+"/"+publi.mes+"/"+publi.año;
