@@ -90,67 +90,7 @@
 
       </ion-col>
 
-      <ion-col size="8" *ngIf="btSelectM=='solid'">
-        
-        <form (ngSubmit)="crearPublicacion(formulario)" #formulario="ngForm">
-        
-                
-          <ion-row>
-            <ion-col>
-              
-                <ion-list>
-                  
-                  <ion-item>
-                    <ion-label position="floating">Título</ion-label>
-                    <ion-input name="titulo"
-                    required
-                    [(ngModel)]="publicacion.titulo"
-                              type="text"
-                               ></ion-input>
-                  </ion-item>
-    
-                  <ion-item>
-                    <ion-label >Fecha de Vencimiento</ion-label>
-                    <ion-input name="venc"
-                    [(ngModel)]="publicacion.fechaVto"
-                               type="date"
-                               ></ion-input>
-                  </ion-item>
-  
-                  <ion-item>
-                   
-                    <ion-icon lazy="true" slot="start" name="cloud-upload-outline"></ion-icon>
-                    <ion-label slot="end">Subir imagen</ion-label>
-                    <input type="file" (change)="loadImageFromDevice($event)" id="file-input"
-                      accept="image/png, image/jpeg">
-                  </ion-item>
-                  
-                  <ion-item>
-                    <ion-label>Nota</ion-label>
-                    <ion-textarea [(ngModel)]="publicacion.cuerpo" [ngModelOptions]="{standalone: true}" rows="6" cols="20" placeholder="Escribir cuerpo de la noticia aquí..." 
-                   ></ion-textarea>
-                  </ion-item>
-    
-                </ion-list>
-            </ion-col>
-          </ion-row>
-          
-          <ion-row>
-            <ion-col class="ion-text-center">
-              <ion-button type="submit"
-                          color="tertiary"
-                          shape="round">
-              Guardar Publicación
-            </ion-button>
-          </ion-col>
-        </ion-row>
      
-      </form>
-
-        
-
-
-      </ion-col> 
       <ion-col size="8" *ngIf="btSelectS=='solid'">
         
         <form (ngSubmit)="crearPublicacion(formulario)" #formulario="ngForm">

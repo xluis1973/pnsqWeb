@@ -107,7 +107,7 @@ private visitantes:number[]=[0,0];
      
     ];
 
-    this.visitantes = await this.reporteSrv.informeVisitantes();
+   this.visitantes = await this.reporteSrv.informeVisitantes();
     this.barChartData = [
       { data: [this.visitantes[1]], label: 'Visitantes sin Guía' },
       { data: [this.visitantes[0]], label: 'Visitantes con Guía' }

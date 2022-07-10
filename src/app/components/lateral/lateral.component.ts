@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { UsuarioService } from '../../services/usuario.service';
 
 @Component({
   selector: 'app-lateral',
@@ -8,7 +9,7 @@ import { NavController } from '@ionic/angular';
 })
 export class LateralComponent implements OnInit {
 
-  constructor(private  navCrl:NavController) { }
+  constructor(private  navCrl:NavController, private userSrv:UsuarioService) { }
 
   ngOnInit() {}
 
@@ -28,5 +29,11 @@ export class LateralComponent implements OnInit {
   }
   reportes(){
     this.navCrl.navigateRoot("/reportes",{animated:true});
+  }
+
+  cerrarSesion(){
+    this.userSrv.cerrarSesion();
+    this.navCrl.navigateRoot("/",{animated:true});
+
   }
 }

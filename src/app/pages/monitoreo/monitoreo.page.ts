@@ -1,5 +1,5 @@
 
-import {  Component, OnInit } from '@angular/core';
+import {  Component, OnDestroy, OnInit } from '@angular/core';
 import { MonitorService } from 'src/app/services/monitor.service';
 
 import { Marker } from '../../interfaces/interfaces';
@@ -16,7 +16,7 @@ declare var google:any;
   styleUrls: ['./monitoreo.page.scss'],
 })
 
-export class MonitoreoPage implements OnInit {
+export class MonitoreoPage implements OnInit, OnDestroy {
 map=null;
 
 
@@ -65,6 +65,9 @@ public btSelectH:String="outline";
         this.map.setZoom(15);
       }
     });
+  }
+  ngOnDestroy() {
+    
   }
 
   onClickM(){

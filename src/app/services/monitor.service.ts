@@ -68,8 +68,12 @@ export class MonitorService {
       });
 
 
+  },(error) => {
+    //...
+    console.log("Se cerró la sesión- Cierro el Listener");
   });
 
+  
  
 });
 

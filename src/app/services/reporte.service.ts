@@ -8,7 +8,6 @@ import { Grupo, Visitante } from '../interfaces/interfaces';
 
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth();
 const db = getFirestore(app);
 @Injectable({
   providedIn: 'root'
@@ -19,7 +18,7 @@ export class ReporteService {
   
   async senderosVisitados(año:boolean,mes:boolean,hoy:boolean){
 
-    this.informeVisitantes();
+    
     let flora:number=0;
     let mirador:number=0;
     let guanacos:number=0;
