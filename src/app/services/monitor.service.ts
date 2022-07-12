@@ -23,9 +23,13 @@ export class MonitorService {
 
   private observaUbicaciones=new Observable<Ubicacion[]>(observe=>{
 
+    
     const ubicacionCol = collection(db, 'ubicacion');
+    const hoyy:Date=new Date();
+    let fechaActual:Date=new Date(hoyy.getFullYear(),hoyy.getMonth(),hoyy.getDate());
+    console.log("Fecha en string ",fechaActual);
   
-    const q = query(ubicacionCol);
+    const q = query(ubicacionCol,where("fechaHora",">=",fechaActual));
     const ubicacionSnapshot =onSnapshot(q,algo=>{
 
       algo.docChanges().forEach(ubi=>{
@@ -97,4 +101,5 @@ buscarElemento(buscar:string):number{
 
 
 }
+
 

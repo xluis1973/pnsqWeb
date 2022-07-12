@@ -39,7 +39,7 @@ public btSelectH:String="outline";
         marcador=new google.maps.Marker({
           position: new google.maps.LatLng(ubicacion.latitud,ubicacion.longitud),
           draggable: false,
-          title: ubicacion.usuario,
+          title: ubicacion.identificador,
                  map: this.map,
                 
                        
@@ -51,7 +51,7 @@ public btSelectH:String="outline";
           infoWindow.setContent(marcador.getTitle());
           infoWindow.open(marcador.getMap(), marcador);
         });
-        
+        console.log("Marcador agregado ",marcador);
         this.markers.push(marcador);
         
         
