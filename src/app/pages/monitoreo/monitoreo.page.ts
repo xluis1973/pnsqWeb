@@ -21,7 +21,7 @@ map=null;
 
 
 markers: any[]=[];
-
+ marcador:any;
 
 public btSelectM:String="outline";
 public btSelectS:String="outline";
@@ -29,14 +29,17 @@ public btSelectH:String="outline";
   constructor(private monitorSrv:MonitorService) { }
   
   ngOnInit() { 
-    this.loadMap();
+  
+      this.loadMap();
+    
+    
     this.monitorSrv.leerUbicaciones().subscribe(resp=>{
 
       this.limpiaMarcadores();
-      let marcador;
+   
       resp.forEach(ubicacion=>{
        
-        marcador=new google.maps.Marker({
+        this.marcador=new google.maps.Marker({
           position: new google.maps.LatLng(ubicacion.latitud,ubicacion.longitud),
           draggable: false,
           title: ubicacion.identificador,
@@ -45,14 +48,14 @@ public btSelectH:String="outline";
                        
           
         });
-        marcador.addListener('click',function(){
+        this.marcador.addListener('click',function(){
           const infoWindow = new google.maps.InfoWindow();
           infoWindow.close();
-          infoWindow.setContent(marcador.getTitle());
-          infoWindow.open(marcador.getMap(), marcador);
+          infoWindow.setContent(this.marcador.getTitle());
+          infoWindow.open(this.marcador.getMap(), this.marcador);
         });
-        console.log("Marcador agregado ",marcador);
-        this.markers.push(marcador);
+        console.log("Marcador agregado ",this.marcador);
+        this.markers.push(this.marcador);
         
         
        
@@ -60,9 +63,10 @@ public btSelectH:String="outline";
       });
 
 
-      if(marcador){
-        this.map.setCenter(marcador.getPosition());
-        this.map.setZoom(15);
+      if(this.marcador){
+        this.map.setCenter(this.marcador.getPosition());
+        this.map.setZoom(27);
+       
       }
     });
   }
@@ -95,7 +99,7 @@ public btSelectH:String="outline";
 
     this.map= await new google.maps.Map(mapEle, {
       center: myLatLng,
-      zoom: 14
+      zoom: 27
     });
 
 //https://drive.google.com/file/d/1aUAxnV5IBJoZnCLK3-qJFfUoZpsqSlpA/view?usp=sharing
@@ -110,8 +114,8 @@ public btSelectH:String="outline";
 
     ctaLayer.setMap(this.map);
     setTimeout(() => {
-     // this.map.setCenter(new google.maps.LatLng(-32.48540517655754, -66.96221829130207));
-     // this.map.setZoom(12);
+      this.map.setCenter(this.marcador.getPosition());
+      this.map.setZoom(17);
       
 }, 3000);
    
