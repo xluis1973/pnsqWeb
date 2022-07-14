@@ -19,6 +19,7 @@ export class MensajesPage implements OnInit, AfterViewInit {
     this.btSelectM="solid";
     this.btSelectS="outline";
     this.btSelectH="outline";
+    this.mensajes=[];
       
     }
 onClickS(){
@@ -30,8 +31,28 @@ onClickS(){
 onClickH(){
   this.btSelectM="outline";
   this.btSelectS="outline";
-  this.btSelectH="solid";  
+  this.btSelectH="solid";
+  this.mensajes=[];  
+  this.msnSrv.obtenerTodosLosMensajes().then(mensajes=>{
+
+    mensajes.forEach(mensaje=>{
+     
+      if(mensaje.mensaje==="Médico"){
+        mensaje.mensaje="/assets/icon/auxilio.png"
+      } else if(mensaje.mensaje==="Policía"){
+        mensaje.mensaje="/assets/icon/policia.png"
+      } else if(mensaje.mensaje==="Incendio"){
+        mensaje.mensaje="/assets/icon/fuego.png"
+      }
+
+      this.mensajes.push(mensaje);
+  
+      console.log("Mensajes ",mensaje);
+    
+
+  });
  
+});
 }
 
   mensajes:Mensaje[]=[];
@@ -50,7 +71,7 @@ onClickH(){
           mensaje.mensaje="/assets/icon/fuego.png"
         }
 
-        this.mensajes.push(mensaje);
+        this.mensajes.unshift(mensaje);
 
       });
       

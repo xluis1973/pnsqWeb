@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { initializeApp} from 'firebase/app';
 
 import {   getMessaging, getToken, MessagePayload, Messaging, onMessage } from "firebase/messaging";
-import { getFirestore, getDocs, collection,setDoc,doc, query, where, getDoc, addDoc, deleteDoc, orderBy } from 'firebase/firestore';
+import { getFirestore, getDocs, collection,setDoc,doc, query, where,limit, getDoc, addDoc, deleteDoc, orderBy } from 'firebase/firestore';
 import { Observable } from 'rxjs';
 
 import { firebaseConfig } from 'src/environments/environment.prod';
@@ -99,6 +99,27 @@ async obtenerUltimoMesaje():Promise<Mensaje>{
   const mensajeList = mensajeSnapshot.docs.map(doc => doc.data());
   if(mensajeList){
     mensaje=mensajeList[0] as Mensaje;
+   
+  }
+  
+  
+    console.log("mensaje ",mensaje);
+    
+  
+  
+  
+  return mensaje
+ }
+ async obtenerTodosLosMensajes():Promise<Mensaje[]>{
+  let mensaje:Mensaje[]=[];
+  const mensajeCol = collection(db, 'mensaje');
+
+  const q = query(mensajeCol,orderBy("fechaEnvio","desc"),limit(10));
+  const mensajeSnapshot = await getDocs(q);
+  
+  const mensajeList = mensajeSnapshot.docs.map(doc => doc.data());
+  if(mensajeList){
+    mensaje=mensajeList as Mensaje[];
    
   }
   

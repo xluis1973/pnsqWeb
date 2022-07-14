@@ -2,7 +2,7 @@
 import {  Component, OnDestroy, OnInit } from '@angular/core';
 import { MonitorService } from 'src/app/services/monitor.service';
 
-import { Marker } from '../../interfaces/interfaces';
+
 
 
 
@@ -65,7 +65,7 @@ public btSelectH:String="outline";
 
       if(this.marcador){
         this.map.setCenter(this.marcador.getPosition());
-        this.map.setZoom(27);
+        this.map.setZoom(17);
        
       }
     });
@@ -99,7 +99,7 @@ public btSelectH:String="outline";
 
     this.map= await new google.maps.Map(mapEle, {
       center: myLatLng,
-      zoom: 27
+      zoom: 17
     });
 
 //https://drive.google.com/file/d/1aUAxnV5IBJoZnCLK3-qJFfUoZpsqSlpA/view?usp=sharing
@@ -114,8 +114,10 @@ public btSelectH:String="outline";
 
     ctaLayer.setMap(this.map);
     setTimeout(() => {
+      if(this.marcador){
       this.map.setCenter(this.marcador.getPosition());
       this.map.setZoom(17);
+      }
       
 }, 3000);
    
