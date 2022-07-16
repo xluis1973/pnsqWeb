@@ -78,7 +78,17 @@ private visitantes:number[]=[0,0];
     { data: [28], label: 'Visitantes con Guía' }
   ];
 
-  barChartOptions = { legend: { display: true, labels: { fontColor: 'black' } }};
+  barChartOptions:ChartOptions = { 
+    legend: { display: true, 
+      labels: { fontColor: 'black' } 
+    }
+  ,scales: {
+    yAxes: [{
+        ticks: {
+            beginAtZero: true
+        }
+    }],
+}};
  
 
   //Gráfico circular
