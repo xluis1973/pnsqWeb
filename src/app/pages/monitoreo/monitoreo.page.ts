@@ -134,13 +134,30 @@ public btSelectH:String="outline";
   
 
   limpiaMarcadores() {
-    this.markers.forEach((marca)=>{
+    /*this.markers.forEach((marca)=>{
       marca.setMap(null);
+      console.log("marcador ",marca);
        marca=null;});
     this.markers=[];
+    */
+   if(this.marcador){
+
+    this.marcador.setMap(null);
+   }
+    
+   console.log("Borrando marcadores");
+   for(let a in this.markers){
+    this.markers[a].setMap(null);
+
+   }
+   this.markers=[];
+   
+    
   }
  
   }
+
+
 
 
 

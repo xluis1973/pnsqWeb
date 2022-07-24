@@ -38,7 +38,7 @@ export class MonitorService {
 
         if (ubi.type === "added") {
          
-          
+                console.log("add");
                 this.listaUbicaciones.push(ubi.doc.data() as Ubicacion);
                 observe.next(this.listaUbicaciones);
 
@@ -50,7 +50,7 @@ export class MonitorService {
       }
       if (ubi.type === "modified") {
        
-
+        console.log("modified");
         const indice=this.buscarElemento(ubi.doc.data().usuario);
         if(indice!=-1){
 
